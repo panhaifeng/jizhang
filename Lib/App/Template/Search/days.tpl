@@ -1,0 +1,1 @@
+<input name="days" type="text" id="days" value="{$arr_condition.days}" size="5">天前发货

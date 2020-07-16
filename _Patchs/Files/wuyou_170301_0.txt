@@ -1,0 +1,2 @@
+ALTER TABLE `caiwu_ar_guozhang`
+ADD COLUMN `gzType`  tinyint(1) NOT NULL COMMENT '过账类型 0正常，1其他' AFTER `money`;

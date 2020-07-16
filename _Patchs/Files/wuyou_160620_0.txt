@@ -1,0 +1,2 @@
+ALTER TABLE `trade_order2product`
+ADD COLUMN `xiadanXianchang`  int(10) NOT NULL COMMENT '下单线长' AFTER `huaxingMemo`;

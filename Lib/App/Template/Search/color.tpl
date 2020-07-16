@@ -1,0 +1,1 @@
+<input name="color" type="text" id="color" value="{$arr_condition.color}" size="10" emptyText='颜色' placeholder='颜色'>

@@ -1,0 +1,6 @@
+CREATE TABLE jichu_chengfen (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '成分',
+  memo varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '备注',
+  PRIMARY KEY (id)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='成分表';

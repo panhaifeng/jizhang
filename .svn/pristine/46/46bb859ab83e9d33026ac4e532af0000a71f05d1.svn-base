@@ -1,0 +1,1 @@
+<input name="planCode" type="text" id="planCode" value="{$arr_condition.planCode}" size="10" emptyText='计划单号' placeholder='计划单号'/>

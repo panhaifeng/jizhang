@@ -1,0 +1,7 @@
+CREATE TABLE `jichu_product_gongxu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `productId` int(11) NOT NULL COMMENT '产品Id',
+  `gongxuId` int(11) NOT NULL COMMENT '工序Id',
+  `xuhao` int(11) NOT NULL COMMENT '工序顺序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;

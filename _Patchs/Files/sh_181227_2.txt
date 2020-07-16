@@ -1,0 +1,9 @@
+CREATE TABLE `check_flawinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `name` varchar(20) NOT NULL COMMENT '疵点名称',
+  `shortcutKey` varchar(30) DEFAULT NULL COMMENT '快捷键',
+  `type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '疵点类型(0普通,1墨印,2起始瑕疵点,3结束瑕疵点,4连续疵点)',
+  `matchName` varchar(20) DEFAULT NULL COMMENT '配对的疵点名称',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='疵点信息配置表';
+

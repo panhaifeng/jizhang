@@ -1,0 +1,2 @@
+ALTER TABLE `jichu_client`
+MODIFY COLUMN `mobile`  varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '手机' AFTER `fax`;

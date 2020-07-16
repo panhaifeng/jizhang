@@ -1,0 +1,2 @@
+ALTER TABLE `jichu_jiagonghu`
+ADD COLUMN `paixu`  int(10) NOT NULL COMMENT '排序' AFTER `kind`;

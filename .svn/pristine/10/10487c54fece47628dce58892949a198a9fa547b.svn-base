@@ -1,0 +1,1 @@
+update jichu_product set proCode = CONCAT(SUBSTR(proCode, 1 , 2),'0',SUBSTR(proCode , 3, 3)) where LENGTH(proCode) = 5;

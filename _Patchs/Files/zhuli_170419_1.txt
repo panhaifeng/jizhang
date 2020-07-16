@@ -1,0 +1,1 @@
+ALTER TABLE `jichu_product` ADD COLUMN `price` decimal(12,2) NOT NULL DEFAULT 0 COMMENT '单价' AFTER `baojia`;

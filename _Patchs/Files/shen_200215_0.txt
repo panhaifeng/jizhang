@@ -1,0 +1,9 @@
+CREATE TABLE `acm_user2maintenance` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) NOT NULL COMMENT '用户id',
+  `kind` tinyint(1) NOT NULL COMMENT '类型 0-前30天提醒 1-到期后提醒',
+  `remindDate` date NOT NULL COMMENT '提示日期',
+  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `userId` (`userId`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='用户维护提醒记录';

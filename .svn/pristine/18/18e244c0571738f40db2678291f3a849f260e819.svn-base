@@ -1,0 +1,6 @@
+ALTER TABLE `sample_db`
+ADD COLUMN `cntJian`  int(5) NOT NULL COMMENT '件数' AFTER `kucunCnt`,
+ADD COLUMN `cntM`  decimal(12,2) NOT NULL COMMENT '米数' AFTER `cntJian`;
+ALTER TABLE `sample_caiyang`
+ADD COLUMN `cntJian`  int(5) NOT NULL COMMENT '件数' AFTER `chukuCnt`,
+ADD COLUMN `cntM`  decimal(12,2) NOT NULL COMMENT '米数' AFTER `cntJian`;

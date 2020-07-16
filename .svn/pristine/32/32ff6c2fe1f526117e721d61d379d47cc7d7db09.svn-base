@@ -1,0 +1,1 @@
+<input name="proKind" type="text" id="proKind" value="{$arr_condition.proKind}" size="10" emptyText='种类' placeholder='种类'/>

@@ -1,0 +1,130 @@
+CREATE TABLE `shengchan_planpj_fenpi` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shengchanId` int(11) NOT NULL COMMENT '生产计划ID',
+  `planId` int(11) NOT NULL COMMENT '坯检计划主表Id',
+  `ord2proId` int(11) NOT NULL COMMENT '订单明细',
+  `ExpectCode` varchar(30) CHARACTER SET utf8 NOT NULL COMMENT '条码',
+  `fenpiDate` date NOT NULL COMMENT '分匹日期',
+  `ganghao` varchar(20) CHARACTER SET utf8 DEFAULT NULL COMMENT '缸号',
+  `cntKg` decimal(10,3) NOT NULL COMMENT '千克数量',
+  `cntM` decimal(10,2) NOT NULL COMMENT '米数',
+  `jitai` varchar(20) COLLATE utf8_bin DEFAULT NULL COMMENT '机台',
+  `jianhao` int(10) NOT NULL COMMENT '件号',
+  `rukuId` int(10) NOT NULL COMMENT '坯布入库id',
+  `chukuId` int(10) NOT NULL COMMENT '坯布出库id',
+  `memo` varchar(100) CHARACTER SET utf8 NOT NULL COMMENT '备注',
+  `timesPrint` smallint(2) NOT NULL COMMENT '打印次数',
+  PRIMARY KEY (`id`),
+  KEY `ExpectCode` (`ExpectCode`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=25529 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='计划坯布分匹数据';
+
+CREATE TABLE `jichu_yanbu_user` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `userCode` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '员工编码',
+  `userName` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '员工名称',
+  `sex` smallint(1) NOT NULL DEFAULT '0' COMMENT '性别',
+  `mobile` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '手机',
+  `address` varchar(40) COLLATE utf8_bin NOT NULL COMMENT '地址',
+  `dateEnter` date NOT NULL COMMENT '入厂时间',
+  `isFire` tinyint(1) NOT NULL COMMENT '是否离职：1为是',
+  `dateLeave` date NOT NULL COMMENT '离厂时间',
+  `shenfenNo` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '身份证号',
+  `hetongCode` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '劳动合同号',
+  `password` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '操作验布机的密码',
+  `type` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '类型',
+  PRIMARY KEY (`id`),
+  KEY `userCode` (`userCode`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='验布工档案';
+
+ALTER TABLE `shengchan_chanliang`
+
+ADD COLUMN `chanliangCode`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '产量编码' AFTER `workCode`,
+ADD COLUMN `fenpiId`  int(11) NOT NULL COMMENT '坯布分匹Id' AFTER `biaozhun`,
+ADD COLUMN `jghId`  int(11) NOT NULL COMMENT '所在加工户id(库存加工户)' AFTER `fenpiId`,
+ADD COLUMN `checkMainId`  int(11) NOT NULL COMMENT '检验主表id' AFTER `jghId`;
+
+CREATE TABLE `check_main` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `ExpectCode` varchar(30) NOT NULL COMMENT '条码',
+  `checkId` int(10) NOT NULL DEFAULT '0' COMMENT '卷号',
+  `kind` varchar(10) NOT NULL COMMENT '检验类型，pibu 坯布, chenpin 成品',
+  `length` decimal(10,1) NOT NULL COMMENT '检验长度',
+  `cutLength` decimal(10,1) NOT NULL COMMENT '开剪长度',
+  `spliceLength` decimal(10,1) DEFAULT '0.0' COMMENT '拼接长度',
+  `inStockLength` decimal(10,1) NOT NULL COMMENT '入库长度',
+  `lengthUnit` varchar(10) NOT NULL COMMENT '长度单位',
+  `weight` decimal(10,3) NOT NULL COMMENT '检验重量',
+  `weightUnit` varchar(10) NOT NULL COMMENT '重量单位',
+  `loomId` varchar(20) NOT NULL COMMENT '车号(织布机号)',
+  `checkMachineId` varchar(20) NOT NULL COMMENT '验布机号',
+  `checkTime` datetime NOT NULL COMMENT '检验时间',
+  `minification` decimal(10,2) NOT NULL COMMENT '缩率',
+  `userName1` varchar(20) NOT NULL COMMENT '验布工1',
+  `userName2` varchar(20) DEFAULT NULL COMMENT '验布工2',
+  `c1` varchar(30) DEFAULT NULL COMMENT '自定义属性1',
+  `c2` varchar(30) DEFAULT NULL COMMENT '自定义属性2',
+  `c3` varchar(30) DEFAULT NULL COMMENT '自定义属性3',
+  `c4` varchar(30) DEFAULT NULL COMMENT '自定义属性4',
+  `c5` varchar(30) DEFAULT NULL COMMENT '自定义属性5',
+  `ext1` varchar(30) DEFAULT NULL COMMENT '扩展字段1',
+  `ext2` varchar(30) DEFAULT NULL COMMENT '扩展字段2',
+  `ext3` varchar(30) DEFAULT NULL COMMENT '扩展字段3',
+  `ext4` varchar(30) DEFAULT NULL COMMENT '扩展字段4',
+  `width` varchar(20) DEFAULT NULL COMMENT '门幅',
+  `kezhong` varchar(20) DEFAULT NULL COMMENT '克重',
+  `grade` varchar(10) DEFAULT NULL COMMENT '等级',
+  `CutWeight` varchar(20) DEFAULT NULL COMMENT '开剪重量',
+  `SpliceWeight` varchar(20) DEFAULT NULL COMMENT '拼接重量',
+  `InStockWeight` varchar(20) DEFAULT NULL COMMENT '入库重量',
+  `isRecovered` int(10) DEFAULT '0' COMMENT '同一条码重复数据标记',
+  PRIMARY KEY (`id`),
+  KEY `checkId` (`checkId`),
+  KEY `ExpectCode` (`ExpectCode`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=14384 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='检验主表';
+
+CREATE TABLE `check_main2flaw` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `mainId` int(11) NOT NULL COMMENT '关联主表id',
+  `flawId` int(11) NOT NULL COMMENT '疵点id',
+  `name` varchar(20) NOT NULL COMMENT '疵点名称',
+  `yStartPos` decimal(10,2) NOT NULL COMMENT '起始经向位置(跟码表数值一致)',
+  `yStartPosCorrected` decimal(10,2) NOT NULL COMMENT '修正后的起始经向位置',
+  `yEndPos` decimal(10,2) NOT NULL COMMENT '结束经向位置(跟码表数值一致)',
+  `yEndPosCorrected` decimal(10,2) NOT NULL COMMENT '修正后的结束经向位置',
+  `len` decimal(10,2) NOT NULL COMMENT '疵点长度',
+  `xPosName` varchar(20) NOT NULL COMMENT '纬向位置名称（如，左、右）',
+  `xPos` decimal(10,2) NOT NULL COMMENT '纬向位置',
+  `score` decimal(10,2) NOT NULL COMMENT '扣分',
+  `value` varchar(30) NOT NULL COMMENT '疵点值',
+  `cut` int(10) DEFAULT NULL COMMENT '是否开剪',
+  `ext1` varchar(30) NOT NULL COMMENT '疵点扩展字段1',
+  `ext2` varchar(30) NOT NULL COMMENT '疵点扩展字段2',
+  `ext3` varchar(30) NOT NULL COMMENT '疵点扩展字段3',
+  `ext4` varchar(30) NOT NULL COMMENT '疵点扩展字段4',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10284 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='检验疵点明细表';
+
+CREATE TABLE `check_main2chenpin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `mainId` int(11) NOT NULL DEFAULT '0' COMMENT '关联主表id',
+  `orderId` varchar(50) NOT NULL COMMENT '订单或订单明细的唯一编码',
+  `kuweiId` int(15) NOT NULL COMMENT '库位Id',
+  `cprkId` int(10) NOT NULL COMMENT '成品入库id',
+  PRIMARY KEY (`id`),
+  KEY `orderId` (`orderId`),
+  KEY `cprkId` (`cprkId`)
+) ENGINE=MyISAM AUTO_INCREMENT=443 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='检验主表-成品';
+
+CREATE TABLE `cangku_fawai2product_chanliang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fawaiId` int(11) NOT NULL COMMENT '外协子表id',
+  `chanliangId` int(11) NOT NULL COMMENT '相关产量的id',
+  `jiagonghuId` int(10) NOT NULL COMMENT '加工户id',
+  `jghFromId` int(10) NOT NULL COMMENT '发出厂',
+  `gongxuId` int(10) NOT NULL COMMENT '工序id',
+  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `ScDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '生成时间',
+  PRIMARY KEY (`id`),
+  KEY `chanliangId` (`chanliangId`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=9119 DEFAULT CHARSET=utf8 COMMENT='外协产量关系表';
+

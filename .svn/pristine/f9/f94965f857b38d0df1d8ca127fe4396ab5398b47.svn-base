@@ -1,0 +1,10 @@
+CREATE TABLE `jichu_color` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `compCode` varchar(40) COLLATE utf8_bin NOT NULL COMMENT '公司编码',
+  `compName` varchar(40) COLLATE utf8_bin NOT NULL COMMENT '公司名称',
+  `memo` varchar(100) COLLATE utf8_bin NOT NULL COMMENT '备注',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `compName` (`compName`),
+  KEY `compCode` (`compCode`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='颜色档案';
+

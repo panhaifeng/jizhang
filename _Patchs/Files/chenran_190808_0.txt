@@ -1,0 +1,2 @@
+ALTER TABLE `shengchan_planpj_fenpi`
+ADD COLUMN `isbuda`  int(1) NOT NULL COMMENT '是否是补打，补打为1' AFTER `timesPrint`;

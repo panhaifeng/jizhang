@@ -1,0 +1,18 @@
+{
+    "url":"http://47.97.21.230/ykb_eqinfo/api/index",
+    "//":"该token必须和响应方提供的token匹配才能获得正常数据"
+    ,"token":"608e870bde43bbb273807f5bee766f8f"
+    ,"type":"json"
+    ,"version":"1.0"
+    ,"data":{
+        "测试相关":{
+            "respon.test":{
+                "name":"测试api"
+                ,"desc":"测试api"
+                ,"params":{
+                   "send_data":"send_data"
+                }
+            }
+        }
+    }
+}

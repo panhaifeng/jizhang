@@ -1,0 +1,2 @@
+ALTER TABLE `acm_userdb`
+ADD COLUMN `isBoss`  int(10) NOT NULL COMMENT '是否为老板角色' AFTER `snInfo`;

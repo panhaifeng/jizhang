@@ -1,0 +1,10 @@
+[2008-03-21 07:17:13 0.23437700] ======= FleaPHP Loaded =======
+[2008-03-21 07:17:13] REQUEST_URI: /E7_Wkdl/
+[2008-03-21 07:17:13] [exception] :FLEA_Exception_MissingController: 缺少控制器 "Default".
+[2008-03-21 07:17:13 0.26138500] ======= FleaPHP End (elapsed: 0.027008 seconds) =======
+
+[2008-06-11 07:22:43 0.54051000] ======= FleaPHP Loaded =======
+[2008-06-11 07:22:44] REQUEST_URI: /E7_CarParts/
+[2008-06-11 07:22:44] [exception] :FLEA_Exception_MissingController: 缺少控制器 "Default".
+[2008-06-11 07:22:44 0.69606800] ======= FleaPHP End (elapsed: 1.155558 seconds) =======
+

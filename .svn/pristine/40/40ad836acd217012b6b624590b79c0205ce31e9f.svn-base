@@ -1,0 +1,3 @@
+ALTER TABLE `trade_order2product`
+ADD COLUMN `zhenshu`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '针数' AFTER `xiadanXianchang`,
+ADD COLUMN `cunshu`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '寸数' AFTER `zhenshu`;

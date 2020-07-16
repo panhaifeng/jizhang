@@ -1,0 +1,2 @@
+ALTER TABLE `cangku_common_chuku2product`
+ADD COLUMN `colorId`  int(11) NOT NULL DEFAULT 0 COMMENT '颜色id' AFTER `planId`;

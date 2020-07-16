@@ -1,0 +1,2 @@
+ALTER TABLE `code_auto_incrementing`
+MODIFY COLUMN `code`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '编号' AFTER `relatId`;

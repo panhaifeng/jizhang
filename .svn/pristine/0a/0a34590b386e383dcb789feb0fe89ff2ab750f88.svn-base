@@ -1,0 +1,7 @@
+CREATE TABLE `check_startnoll` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `orderID` varchar(20) NOT NULL COMMENT '订单子表ID',
+  `rollNo` varchar(20) NOT NULL COMMENT '自定义卷号',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='自定义卷号配置表';
+

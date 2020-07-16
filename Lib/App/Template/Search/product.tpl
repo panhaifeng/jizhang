@@ -1,0 +1,1 @@
+<input name="product" type="text" id="product" value="{$arr_condition.product}" size="10" emptyText='{webcontrol type='GetProductInf'}' placeholder='{webcontrol type='GetProductInf'}' />

@@ -1,0 +1,5 @@
+ALTER TABLE `cangku_common_chuku2product`
+ADD COLUMN `ganghao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '缸号' AFTER `pihao`;
+ALTER TABLE `cangku_common_kucun`
+ADD COLUMN `ganghao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '缸号' AFTER `pihao`;
+

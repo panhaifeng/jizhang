@@ -1,0 +1,2 @@
+ALTER TABLE `jichu_product`
+ADD COLUMN `localDelp`  int(1) NOT NULL COMMENT '开发登记页面上快捷录入标记' AFTER `cunshu`;

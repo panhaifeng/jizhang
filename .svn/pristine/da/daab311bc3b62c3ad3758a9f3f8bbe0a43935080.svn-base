@@ -1,0 +1,17 @@
+CREATE TABLE `acm_qrcodeverify` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `token` varchar(50) COLLATE utf8_bin NOT NULL COMMENT 'token',
+  `userName` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '用户名',
+  `compCode` varchar(32) COLLATE utf8_bin NOT NULL COMMENT '公司代号',
+  `timestamp` int(10) unsigned NOT NULL COMMENT '时间戳',
+  `projectAdd` varchar(200) COLLATE utf8_bin NOT NULL COMMENT '项目地址',
+  `status` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '状态',
+  `message` varchar(300) COLLATE utf8_bin NOT NULL COMMENT '返回信息',
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `token` (`token`) USING BTREE,
+  KEY `timestamp` (`timestamp`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='二维码登陆验证记录';
+
+ALTER TABLE `acm_userdb` 
+ADD COLUMN `qrCodeVerify` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否需要扫码验证' AFTER `realName`,
+ADD INDEX `qrCodeVerify`(`qrCodeVerify`);

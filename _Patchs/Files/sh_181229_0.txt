@@ -1,0 +1,10 @@
+CREATE TABLE `check_template` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `fileName` varchar(30) NOT NULL COMMENT '文件名称',
+  `filePath` varchar(50) DEFAULT NULL COMMENT '存储路径',
+  `type` varchar(20) NOT NULL COMMENT '模板类型(sys-系统级  client-客户级  order-订单级)',
+  `relateId` int(10) NOT NULL COMMENT '相关id(客户id或订单id，系统级时为0)',
+  `uploadTime` datetime NOT NULL COMMENT '配对的疵点名称',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='检验打印模板信息表';
+

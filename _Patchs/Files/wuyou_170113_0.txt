@@ -1,0 +1,2 @@
+ALTER TABLE `shengchan_chanliang`
+ADD COLUMN `jisu`  decimal(10,2) NOT NULL COMMENT '机速' AFTER `revolution`;

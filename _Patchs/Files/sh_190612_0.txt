@@ -1,0 +1,3 @@
+ALTER TABLE `cangku_common_kucun`
+ADD INDEX `ganghao` (`ganghao`) ;
+

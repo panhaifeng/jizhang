@@ -1,0 +1,3 @@
+ALTER TABLE `cangku_fawai2product` ADD COLUMN `type` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '后整理布的区分' AFTER `unit`;
+ALTER TABLE `cangku_common_chuku2product` ADD COLUMN `type` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '布的区分' AFTER `unit`;
+ALTER TABLE `cangku_common_ruku2product` ADD COLUMN `type` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '布的区分' AFTER `unit`;

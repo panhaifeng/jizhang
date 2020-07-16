@@ -1,0 +1,1 @@
+<input name="huaxing" type="text" id="huaxing" value="{$arr_condition.huaxing}" size="10" emptyText="{webcontrol type='Sysparam' item='manuCodeName'}" placeholder="{webcontrol type='Sysparam' item='manuCodeName'}"/>

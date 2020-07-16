@@ -1,0 +1,51 @@
+﻿-- 2014-05-08 by lei --
+ALTER TABLE `trade_order2product`
+ADD COLUMN `color`  varchar(20) NOT NULL COMMENT '颜色' AFTER `dateJiaohuo`;
+ALTER TABLE `trade_order2product`
+DROP COLUMN `color`,
+MODIFY COLUMN `unit`  varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '单位(m/y/kg)' AFTER `dateJiaohuo`;
+
+ALTER TABLE `trade_order2product`
+ADD COLUMN `supplierId`  int(10) NOT NULL COMMENT '供应商Id' AFTER `chanpinId`;
+
+-- 2015-4-1 by jiang --
+ALTER TABLE `cangku_common_chuku2product`
+ADD COLUMN `plan2touliaoId`  int(11) NOT NULL COMMENT '投料Id' AFTER `dt`,
+ADD COLUMN `planId`  int(11) NOT NULL COMMENT '生产计划Id' AFTER `plan2touliaoId`;
+ALTER TABLE `shengchan_chanliang`
+ADD COLUMN `zhizao2planId`  int(11) NOT NULL COMMENT '织造Id' AFTER `dt`;
+
+ALTER TABLE `jichu_product`
+ADD COLUMN `state`  tinyint(2) NOT NULL COMMENT '状态：0 纱，1布' AFTER `memo`;
+
+update jichu_product set state=1 where kind='针织';
+
+ALTER TABLE `shengchan_chanliang`
+ADD COLUMN `planId`  int(11) NOT NULL COMMENT '生产计划Id' AFTER `zhizao2planId`;
+
+ALTER TABLE `shengchan_chanliang`
+ADD COLUMN `jiagonghuId`  int(11) NOT NULL COMMENT '加工户Id' AFTER `planId`;
+
+ALTER TABLE `caiwu_yf_fapiao`
+ADD COLUMN `kind`  tinyint(1) NOT NULL COMMENT '类型：0采购过账，1加工过账' AFTER `dt`;
+ALTER TABLE `caiwu_yf_fukuan`
+ADD COLUMN `kind`  tinyint(1) NOT NULL COMMENT '类型：0采购过账，1加工过账' AFTER `dt`;
+
+ALTER TABLE `trade_order2product`
+ADD COLUMN `isShiyong`  tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否余存可用：0可用1已用' AFTER `dateJiaohuo`;
+
+
+--zhujunjie by 2015/11/11--
+ALTER TABLE `shengchan_shangji`
+ADD COLUMN `dateLiaoji`  date NOT NULL COMMENT '预计了机' AFTER `dateShangji`;
+
+-- 2015-11-19 by zcc --
+ALTER TABLE `cangku_fawai2product`
+MODIFY COLUMN `danjia`  decimal(10,3)  NOT NULL COMMENT '单价';
+
+-- 2015-11-20 by zcc--
+ALTER TABLE `cangku_fawai2product`
+ADD COLUMN `dengjidanjia`  decimal(10,3) NOT NULL COMMENT '后整登记单价' ;
+
+ALTER TABLE `shengchan_chanliang`
+ADD COLUMN `dengjidanjia`  decimal(10,3) NOT NULL COMMENT '后整登记单价' ;

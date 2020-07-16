@@ -1,0 +1,6 @@
+ALTER TABLE `check_main`
+ADD INDEX `isRecovered` (`isRecovered`) ;
+
+ALTER TABLE `shengchan_chanliang`
+ADD INDEX `fenpiId` (`fenpiId`) ;
+

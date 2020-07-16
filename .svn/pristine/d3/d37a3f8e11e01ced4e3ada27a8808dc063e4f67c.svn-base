@@ -1,0 +1,201 @@
+body,input,select,textarea{font-size:12px;font-family:arial,宋体;}
+body,form{margin:0;padding:0;}
+img{border:0;}
+body{background:#dcdcdc url(http://cn.yimg.com/i/realn/fp/bbg.gif) repeat-x top;text-align:center;}
+a:link,a:visited{color:#0049d3;text-decoration:none;}
+a:hover,a:active{color:#f70;text-decoration:underline;}
+a.lnkg:link,a.lnkg:visited{color:#666;}
+#hd,#bd,#ft,#nav{width:95%;margin:0 auto;}
+.bdl,.bdm,.lg{float:left;}
+.bdr,.hdt,.navitm{float:right;}
+.bdl{width:28%;margin-right:1%;}
+.bdm{width:42%;}
+.bdr{width:28%;}
+.cen{text-align:center !important;}
+.colcon{text-align:left;}
+.colcon .istpad textarea {width:100%; border:0;overflow-y:hidden; padding:3px; overflow:hidden; height:auto;}
+.col{border:1px solid #9698ad;background-color:#fff;margin-bottom:.8em;}
+.colbatch{border:1px solid #9698ad;background-color:#fff;margin-bottom:.0em;}
+.coltit{height:25px;line-height:25px;background:#d5d5d5 url(http://cn.yimg.com/i/realn/fp/titbg.gif) repeat-x;border-bottom:1px solid #b6b7ca;cursor:move;}
+.coltit strong{float:left;margin-left:.5em;padding-left:1.4em;}
+.coltit span{float:right;font-style:normal;}
+.colcon{border-top:1px solid #dddddb;padding:.4em .8em;line-height:1.5em;}
+.close,.open,.title,.edit,.refresh,.hidde{float:left;cursor:pointer;cursor:hand;}
+.edit,.refresh,.hidde{color:#0049d3;margin-right:.5em;}
+.close,.open{width:20px;height:25px;overflow:hidden;}
+.close{background:url(http://cn.yimg.com/i/realn/fp/bnop.gif) 5px 6px no-repeat;}
+.open{background:url(http://cn.yimg.com/i/realn/fp/bncl.gif) 5px 6px no-repeat;}
+.title{font-weight:bold;cursor:text;}
+#bd:after,#bd div.weac1:after,#bd div.weac2:after,#bd ul.sitelst:after,#bd ul.sitelsta:after,#bd ul.sitelstb:after,#bd div.srhtab:after,#bd div.edbm:after,#hd:after{content:'.';display:block;clear:both;visibility:hidden;height:0;}
+.pd0{padding: 1px;}
+.pd1{padding: .6em 0 0 1.2em;}
+.b0{border:0 !important;}
+.hide{display:none !important;}
+.box1 { border:1px solid #5B83E2;}
+.box2 { border:3px solid #E7EDFB;}
+.colcon .istpad { width:98%; overflow:hidden;}
+.colcon .istpad .dashed { width:100%; border:1px dashed #4E5E88;overflow-y:hidden; padding:3px; overflow:hidden;}
+.welword .dashed { border:1px dashed #fff; background-color:#A8B0C8;}
+
+/* header */
+.lg{width:18%;margin-top:1em;}
+.hdt{width:80%;height:68px;background:url(http://cn.yimg.com/i/realn/fp/txtbg.gif) 100% .5em no-repeat;}
+.welword{margin-top:42px;background:#7684ab url(http://cn.yimg.com/i/realn/fp/txtbg2.gif) no-repeat top left;height:27px;;text-align:left;overflow:hidden;}
+.welword input {font-size:14px;color:#fff; margin-left:3em;padding-top:5px; _padding-top:5px; height:25px; border:0; background-color:#7684AB; width:90%; border:1px solid #7684AB; padding-left:4px;}
+#nav{margin-bottom:.8em;background:#969db8;}
+.nav{border:1px solid #aaa;}
+.navbar{background:url(http://cn.yimg.com/i/realn/fp/navbg.gif) repeat-y #A8B0C8;height:30px;border:1px solid #fff;}
+.navmsg{text-align:left;color:#fff;padding:.5em 2em;background:url(http://cn.yimg.com/i/realn/fp/ictip.gif) 10px 5px no-repeat;}
+.navmsg a:link,.navmsg a:visited,.navmsg a:hover,.navmsg a:active{color:#fff;text-decoration:underline;}
+.lnknav{float:left;background:url(http://cn.yimg.com/i/realn/fp/bnbg.gif) no-repeat center;width:86px;*width /* */:88px;height:23px;line-height:23px;border:1px solid #5a82e2;margin:.15em .5em;}
+.navitm{color:#666;margin:.5em 1em 0 0;}
+/* weather */
+.weac1{width:100%;margin-bottom:.5em;}
+.weatit{color:#898989;text-align:center;line-height:2.3em; background-color:#EDEDED;}
+.weatit strong,.weac1 ul li strong,.weac2 ul li strong,.sitelst li.hot,.sitelst li.hot a,.sitelsta li strong,.sitelstb li strong,.timecon strong,.timepanel strong{color:#fe7600;}
+.weatit strong { font-size:14px;}
+.sitelstb strong a:link,.sitelstb strong a:visited {color:#fe7600;}
+.weac1 ul,.weac2 ul{margin:0;padding:0;list-style:none;}
+.weac1 ul li,.weac2 ul li{float:left;display:inline;color:#010101;margin-right:1em;}
+.weac1 ul{margin-left:2em;}
+.weac2{padding-bottom:.4em;}
+.weac2{clear:both;width:100%;background-color:#ededed;}
+.weac2 ul li{margin-left:2em;}
+/* my sites,mail,holiday */
+.sitelst,.sitelsta,.sitelstb{width:100%;margin:0;padding:0;list-style:none;}
+.sitelst li,.sitelsta li,.sitelstb li{float:left;height:23px;line-height:23px;overflow:hidden;}
+.cbg{padding:0 0 0 1em;background:url(http://cn.yimg.com/i/realn/fp/cbg1.gif);}
+.blne{border-bottom:1px solid #c9deef;margin-bottom:.4em;}
+.bdl .sitelst li,.bdr .sitelst li{width:76px;}
+.bdm .sitelst li{width:70px;}
+.sitelsta li,.sitelstb li{width:100px; position:relative; _position:static;}
+.sitelsta li img,.sitelstb li img{position:absolute; top:4px;}
+.sitelst li img,.sitelst li img{ _position:absolute; _top:4px;}
+.bdm .sitelsta li{width:94px;line-height:1.5em;}
+/* search */
+.srhbg{background:#e9edec;}
+.srhtab{width:80%;margin:0 auto .5em auto;}
+.srhtab ul{margin:0;padding:0;list-style:none;}
+.srhtab ul li{float:left;}
+.srhtab ul li.on{border:1px solid #adbfe7;font-weight:bold; padding:.1em .6em;}
+.srhtab ul li a{display:block;padding:.1em .6em;}
+.srhinp{height:27px;border-left:1px solid #d9e9f8;border-right:1px solid #d9e9f8;text-align:left;}
+.srhinp input{float:left;width:80%;height:23px;_height:17px;*height /* */:23px;margin:2px 0 2px 1px;padding:2px;font-size:14px;color:#aaa; border:1px solid #5984E0; border-right:0;}
+.srhinp button{float:left;width:19%;height:23px;background:url(http://cn.yimg.com/i/realn/fp/bnsrh2.gif) top repeat-x #B8C3CD;margin:2px 1px;color:#0149d0;font-weight:bold; border:1px solid #5984E0; margin-left:0; font-size:12px;}
+.srhkeys{text-align:left;padding:.4em 0;}
+.bdl .srhtab{width:90%;}
+.bdl .srhinp input{width:75.2%;*width /* */:78%;}
+.bdr .srhtab{width:90%;}
+.bdr .srhinp input{width:76.8%;*width /* */:79.5%;}
+/* category */
+.bline{background:url(http://cn.yimg.com/i/realn/fp/daslin.gif) repeat-x;height:.5em;overflow:hidden;}
+.sitelstb li{padding-bottom:.66em;width:94px;line-height:1.5em;line-height:auto;height:auto;}
+.bdl .sitelstb li,.bdr .sitelstb li{width:100px;}
+/* timer */
+.timecon{padding:.2em 1em;}
+.timecon ul { margin:5px 0; padding:0; list-style:none;}
+.timecon li { margin-bottom:.5em;}
+.timecon .tsel {text-align:left; margin-left:2em;}
+.timecon textarea { vertical-align:middle; width:160px; height:35px;}
+.timecon .tsel select { margin-bottom:.3em;}
+.myorder { text-align:left; padding-left:.4em;}
+.myorder img { vertical-align:middle; margin:2px 0;}
+.myorder a:link,.myorder a:visited { line-height:22px;}
+.timepanel{text-align:center;padding:.8em 0;}
+.timepanel strong{font-size:20px;}
+.timepanel p{margin:.5em 0 0 0;}
+/* photos */
+.picctl { margin-bottom:.4em;}
+.picctl a:link,.picctl a:visited,.picctl a:hover,.picctl a:active{display:inline-block;display:-moz-inline-box;zoom:1;vertical-align:middle;margin:.4em 1em .4em 0;}
+.picctlpre,.picctlnext,.picctlstop,.picctlplay{background:url(http://cn.yimg.com/i/realn/fp/bnvpic.gif) no-repeat #000;width:28px;height:17px;overflow:hidden;}
+.picctlnext{background-position:-56px 0;}
+.picctlpre{background-position:-84px 0;}
+.picctlstop{background-position:-28px 0;}
+.picctlplay{background-position:0 0;}
+/*
+.picpreview{*width:98.6%; float:left;height:200px;margin:0 auto;overflow:hidden; background:url(http://cn.yimg.com/i/3721/z.jpg) center top #fff;}
+*/
+.picpreview{*width:98.6%; *float:left;height:200px;margin:0 auto;overflow:hidden; }
+.picpreview .blank { width:0; height:200px; border:0; }
+.picpreview img { vertical-align:middle; border:4px solid #fff; outline:1px solid #ccc;}
+.picpreview span { border:1px solid #ccc;}
+/* radio */
+.radiochannel{height:80px;background:url(http://cn.yimg.com/i/realn/fp/radiobg.jpg) no-repeat top left;padding:.4em 0 0 6em;}
+.radiochannel ul{margin:0;padding:0;list-style:none;}
+.radiochannel ul li{float:left;width:80px;background:url(http://cn.yimg.com/i/realn/fp/arr.gif) 0 5px no-repeat;padding-left:10px;}
+.bdl .radiochannel{padding-left:5em;}
+/* tools,download */
+.bdr ul.sitelst li{width:80px;}
+/* edit mode */
+.edtop{padding-top:.5em;background:#f6f6f6;text-align:left;}
+.edtop ul{width:100%;margin:0;padding:0;list-style:none;}
+.edtop ul li{width:100%;height:26px;}
+a.lnkr:link,a.lnkr:visited,a.lnkr:hover,a.lnkr:active{line-height:26px;color:#f03;text-decoration:underline;}
+.edtop ul li b{float:left;width:80px;*width /* */:70px;margin-right:.2em;text-align:right;line-height:22px;font-weight:normal;white-space:nowrap;}
+.bnt{width:44px;height:20px;background:transparent url(http://cn.yimg.com/i/realn/fp/bn.gif) no-repeat center;border:0;}
+.edbm{background:#fff;border-top:1px solid #ddd;padding:.5em 1em;}
+.embm2 {border:0;padding:.5em 0; margin-left:10px;}
+.bndel{float:left;margin:.4em .2em 0 0;width:9px;height:10px;background:url(http://cn.yimg.com/i/realn/fp/bncla.gif) no-repeat;overflow:hidden;vertical-align:middle;}
+.edbm a{margin-bottom:.8em;}
+.edbm ul{margin:0;padding:0;list-style:none;}
+.edbm ul li{clear:both;width:100%;height:20px;line-height:20px;}
+/*my diy*/
+#mydiy { width:180px; background-color:#fff;}
+#mydiy button { padding:0;line-height:16px; cursor:pointer; _cursor:hand;}
+#mydiy ul { margin:0; padding:0; list-style:none;}
+#mydiy li { background:url(http://cn.yimg.com/i/realn/fp/ic2.gif) 8px 5px no-repeat; padding-left:1em; clear:both; border-left:1px solid #fff; border-right:1px solid #fff;}
+#mydiy .t { background-color:#f4f4f4; height:26px; line-height:26px; border:0; background:url(http://cn.yimg.com/i/realn/fp/ic1.gif) 5px 8px no-repeat #f4f4f4;}
+#mydiy .a { padding-left:1.3em; background-color:#f4f4f4; height:22px; line-height:22px;}
+#mydiy .b { padding-left:1.3em; background-color:#fff; height:22px; line-height:22px; _height:18px; _line-height:18px;}
+#mydiy .l { float:left; padding-left:.5em;}
+#mydiy .r { float:right; padding-right:.5em; font-family:"宋体"; word-spacing:-2px;}
+/*iopanel*/
+#iopanel { width:370px; _width:360px; _width /* */:390px; background-color:#fff;}
+#iopanel button { cursor:pointer; _cursor:hand;}
+#iopanel .iocon {padding:.5em .2em .5em 0; position:relative; width:100%;}
+#iopanel .iotxt { text-align:left; line-height:16px; width:86%; margin:auto; color:#666; margin-top:4px;}
+/*batch add*/
+#batchadd { width:830px;}
+#batchadd button { background-color:#FFEF00; border-right:2px solid #DA7A40; border-bottom:2px solid #DA7A40; padding:0 .3em; font-size:12px; cursor:pointer; _cursor:hand;}
+#batchadd .pd1 { padding:0;}
+#batchadd .coltit { *width:832px;}
+#batchadd .b1 { font-size:12px !important;}
+.tabbg{font-size: 12px;text-decoration: none;background-image:url(http://cn.yimg.com/i/3721/left_tab2.gif);height: 25px;width: 104px;}
+#batchcont td { font-size:12px;}
+.b1{padding-left:20px;padding-top:3px;}
+a.tabbg01{ width:104px; height:25px; display:block; background-image:url(http://cn.yimg.com/i/3721/left_tab2.gif); background-repeat:no-repeat; background-position:right;line-height:21px;}
+a.tabbg01:hover{background-image:url(http://cn.yimg.com/i/3721/left_tab1.gif); background-repeat:no-repeat; width:104px; height:25px; color:#000; text-decoration:underline;}
+.tabbg02{background-image:url(http://cn.yimg.com/i/3721/left_tab1.gif); background-repeat:no-repeat; width:104px; height:25px; color:#000; text-decoration:none;}
+.tabb{height: 2px;width: 104px;}
+.bt01 {font-size: 12px;font-weight: bold;color: #FF6600;line-height:22px;text-decoration: none; padding-top:5px;}
+.dot{ height:1px;background:url(http://cn.yimg.com/i/3721/dot.gif) repeat-x; line-height:0;}
+a.selected:link,a.selected:visited,a.selected:hover{color:#000;font-size:12px;text-decoration:none;}
+.icon01 {color: #333;text-decoration: none;padding-right: 5px;padding-left:7px;}
+#ft,#ft a{color:#7785ac;}
+#ft{padding:.8em 0;}
+.close1 {float:left;cursor:pointer;cursor:hand;}
+.close1 {width:20px;height:25px;overflow:hidden;}
+.close2 { width:13px; height:13px; position:absolute; right:3px; top:1px;} 
+.coltit .close2 { top:6px; width:14px; right:10px; _right:4px;}
+.edit1 {float:left;cursor:pointer;cursor:hand;}
+.hidde1 {float:left;cursor:pointer;cursor:hand;}
+.open1 {float:left;cursor:pointer;cursor:hand;}
+.open1 {width:20px;height:25px;overflow:hidden;}
+.open1 {background:url(http://cn.yimg.com/i/3721/ar.gif) 5px 6px no-repeat;}
+.refresh1 {float:left;cursor:pointer;cursor:hand;}
+.title1 {float:left;cursor:pointer;cursor:hand; font-size:14px; color:#4D4960;}
+.title1 {font-weight:bold;cursor:text;}
+/* footer */
+#ft,#ft a{color:#7785ac;}
+#ft{padding:.8em 0;}
+/*misc*/
+#weatherc { float:left;} 
+.ft1 { font-weight:bold; font-size:14px; line-height:22px;}
+.tmp {font-family:Georgia, "Times New Roman", Times, serif;font-size:150%;font-weight:bold;line-height:180%}
+.tpa { color:#E00000;font-family:Georgia, "Times New Roman", Times, serif;}
+.tpb { color:#009A9A;font-family:Georgia, "Times New Roman", Times, serif;}
+.hitp { color:#E30000;}
+.lotp { color:#099;}
+.l2 a:link,.l2 a:visited { color:#04d; font-weight:bold;}
+.l2 { margin:10px 0;}
+.wic { margin-top:20px;}

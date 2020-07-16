@@ -1,0 +1,1 @@
+ALTER TABLE `cangku_common_ruku2product` ADD COLUMN `shuhao` varchar(20) NOT NULL DEFAULT '' COMMENT '束号' AFTER `ganghao`;

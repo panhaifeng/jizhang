@@ -1,0 +1,217 @@
+[2020-06-24 17:09:06 0.70896600] ======= FleaPHP Loaded =======
+[2020-06-24 17:09:06] REQUEST_URI: /index.php?controller=Login&action=login
+[2020-06-24 17:09:06] [exception] :FLEA_Db_Exception_SqlQuery: SQL 错误消息: "Unknown database 'jm'"
+SQL 语句: "SELECT DATABASE: 'jm' FAILED!"
+SQL 错误代码: "7335941".
+[2020-06-24 17:09:06 0.75408100] ======= FleaPHP End (elapsed: 0.045115 seconds) =======
+
+[2020-06-24 17:09:26 0.85918100] ======= FleaPHP Loaded =======
+[2020-06-24 17:09:26] REQUEST_URI: /index.php?controller=Login&action=login
+[2020-06-24 17:09:26] [exception] :FLEA_Db_Exception_SqlQuery: SQL 错误消息: "Unknown database 'jm'"
+SQL 语句: "SELECT DATABASE: 'jm' FAILED!"
+SQL 错误代码: "7335941".
+[2020-06-24 17:09:26 0.90112800] ======= FleaPHP End (elapsed: 0.041947 seconds) =======
+
+[2020-07-15 08:59:12 0.65737800] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:14] REQUEST_URI: /jinma/index.php?controller=Login&action=login
+[2020-07-15 08:59:14] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:14] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:14] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2020-07-15 08:59:14] [debug] :sql: SELECT  `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`userName` = 'admin'  LIMIT 1
+[2020-07-15 08:59:14 0.70347700] ======= FleaPHP End (elapsed: 2.046099 seconds) =======
+
+[2020-07-15 08:59:18 0.93490400] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:20] REQUEST_URI: /jinma/index.php?controller=Login&action=login
+[2020-07-15 08:59:20] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:20] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:20] [debug] :sql: SELECT  `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`userName` = 'admin'  LIMIT 1
+[2020-07-15 08:59:20 0.96419300] ======= FleaPHP End (elapsed: 2.029289 seconds) =======
+
+[2020-07-15 08:59:21 0.51641000] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:23] REQUEST_URI: /jinma/index.php?controller=Main&action=index
+[2020-07-15 08:59:23] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:23] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:23] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 08:59:23] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 08:59:24 0.33111500] ======= FleaPHP End (elapsed: 2.814705 seconds) =======
+
+[2020-07-15 08:59:24 0.47684800] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:26] REQUEST_URI: /jinma/Index.php?controller=Main&action=BossReport
+[2020-07-15 08:59:26] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:26] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:26] [debug] :sql: SHOW FULL COLUMNS FROM `trade_order`
+[2020-07-15 08:59:26] [debug] :sql: SELECT min(orderDate) as minDate FROM trade_order WHERE orderDate<>'0000-00-00'
+[2020-07-15 08:59:26] [debug] :sql: SELECT
+			 	sum(if(t.unit='M',t.cntYaohuo,round(t.cntYaohuo*0.9144,1))) as cntM,
+				round(
+					sum(
+						IF (
+							t.unit = 'Y',
+							t.danjia / 0.9144 * t.cntYaohuo * b.huilv,
+							t.danjia  * t.cntYaohuo * b.huilv
+						)
+					),
+					2
+				) AS money,
+				LEFT (b.orderDate, 7) AS month,c.compName,
+				b.clientId,b.traderId,d.employName
+                FROM trade_order2product t
+                LEFT JOIN trade_order b on t.orderId=b.id
+                LEFT JOIN jichu_client c on c.id=b.clientId
+                LEFT JOIN jichu_employ d on d.id=b.traderId
+                WHERE 1
+                and b.orderDate like '2020%'
+                GROUP BY left(b.orderDate,7),b.clientId
+[2020-07-15 08:59:26 0.58241700] ======= FleaPHP End (elapsed: 2.105569 seconds) =======
+
+[2020-07-15 08:59:26 0.58786800] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:28] REQUEST_URI: /jinma/Index.php?controller=main&action=Welcome
+[2020-07-15 08:59:28] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:28] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:28] [debug] :sql: SELECT * FROM `oa_message` where kindName='行政通知' order by id desc limit 0,10
+[2020-07-15 08:59:28] [debug] :sql: SELECT * FROM `oa_message` where kindName='生产通知' order by id desc limit 0,10
+[2020-07-15 08:59:28] [debug] :sql: SELECT x.*,y.orderCode,z.employName
+		FROM `trade_order2product` x
+		left join trade_order y on x.orderId=y.id
+		left join jichu_employ z on z.id=y.traderId 
+		where x.dateJiaohuo>='2020-07-15' and x.dateJiaohuo <= '2020-07-22'
+		group by x.orderid order by dateJiaohuo
+[2020-07-15 08:59:28] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2020-07-15 08:59:28] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2020-07-15 08:59:28] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2020-07-15 08:59:28] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2020-07-15 08:59:28] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2020-07-15 08:59:28] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2020-07-15 08:59:28] [debug] :sql: select x.* from jichu_employ x
+		left join jichu_department y on y.id=x.depId
+		where depName='销售部' or depName='业务部'
+		and isFire=0
+[2020-07-15 08:59:28] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_client`
+[2020-07-15 08:59:28] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2020-07-15 08:59:28] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2020-07-15 08:59:28] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2020-07-15 08:59:28] [debug] :sql: select * from jichu_client where 1 order by  letters
+[2020-07-15 08:59:28 0.75659400] ======= FleaPHP End (elapsed: 2.168726 seconds) =======
+
+[2020-07-15 08:59:28 0.76294700] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:30] REQUEST_URI: /jinma/index.php?controller=main&action=getmenu
+[2020-07-15 08:59:30] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:30] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:30 0.83796000] ======= FleaPHP End (elapsed: 2.075013 seconds) =======
+
+[2020-07-15 08:59:30 0.84730800] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:32] REQUEST_URI: /jinma/index.php?controller=tool&action=GetPopByAjax
+[2020-07-15 08:59:32] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:32] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:32 0.86661200] ======= FleaPHP End (elapsed: 2.019304 seconds) =======
+
+[2020-07-15 08:59:32 0.87435100] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:34] REQUEST_URI: /jinma/index.php?controller=Main&action=GetMaintenanceInfo
+[2020-07-15 08:59:34] [debug] :sql: SELECT VERSION()
+[2020-07-15 08:59:34] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 08:59:34] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 08:59:34] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 08:59:35] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2maintenance`
+[2020-07-15 08:59:35 0.04479400] ======= FleaPHP End (elapsed: 2.170443 seconds) =======
+
+[2020-07-15 08:59:35 0.06232800] ======= FleaPHP Loaded =======
+[2020-07-15 08:59:35] REQUEST_URI: /jinma/Index.php?controller=Yixiang_Client&action=GetJsonByTraderId&traderId=&all=n
+[2020-07-15 08:59:35] [exception] :FLEA_Exception_MissingController: 缺少控制器 "Yixiang_Client".
+[2020-07-15 08:59:35 0.08616600] ======= FleaPHP End (elapsed: 0.023838 seconds) =======
+
+[2020-07-15 09:00:24 0.54846000] ======= FleaPHP Loaded =======
+[2020-07-15 09:00:26] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:00:26] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:00:26] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:00:26] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:00:26] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:00:26] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:00:26 0.60144100] ======= FleaPHP End (elapsed: 2.052981 seconds) =======
+
+[2020-07-15 09:01:26 0.92293800] ======= FleaPHP Loaded =======
+[2020-07-15 09:01:28] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:01:28] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:01:28] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:01:28] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:01:28] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:01:29] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:01:29 0.01346000] ======= FleaPHP End (elapsed: 2.090522 seconds) =======
+
+[2020-07-15 09:02:29 0.91143500] ======= FleaPHP Loaded =======
+[2020-07-15 09:02:31] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:02:31] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:02:31] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:02:31] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:02:31] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:02:32] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:02:32 0.00557400] ======= FleaPHP End (elapsed: 2.094139 seconds) =======
+
+[2020-07-15 09:03:32 0.07426600] ======= FleaPHP Loaded =======
+[2020-07-15 09:03:34] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:03:34] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:03:34] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:03:34] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:03:34] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:03:34] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:03:34 0.11426600] ======= FleaPHP End (elapsed: 2.040000 seconds) =======
+
+[2020-07-15 09:04:34 0.19647000] ======= FleaPHP Loaded =======
+[2020-07-15 09:04:36] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:04:36] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:04:36] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:04:36] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:04:36] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:04:36] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:04:36 0.24025500] ======= FleaPHP End (elapsed: 2.043785 seconds) =======
+
+[2020-07-15 09:05:38 0.55837200] ======= FleaPHP Loaded =======
+[2020-07-15 09:05:40] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:05:40] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:05:40] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:05:40] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:05:40] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:05:40] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:05:40 0.58337100] ======= FleaPHP End (elapsed: 2.024999 seconds) =======
+
+[2020-07-15 09:06:40 0.90838600] ======= FleaPHP Loaded =======
+[2020-07-15 09:06:42] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:06:42] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:06:42] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:06:42] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:06:42] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:06:42] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:06:42 0.96644000] ======= FleaPHP End (elapsed: 2.058054 seconds) =======
+
+[2020-07-15 09:07:43 0.90919400] ======= FleaPHP Loaded =======
+[2020-07-15 09:07:45] REQUEST_URI: /jinma/index.php?controller=main&action=GetTongzhiByAjax
+[2020-07-15 09:07:45] [debug] :sql: SELECT VERSION()
+[2020-07-15 09:07:45] [debug] :sql: SET NAMES 'utf8'
+[2020-07-15 09:07:45] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2020-07-15 09:07:45] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2020-07-15 09:07:45] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2020-07-15 09:07:45 0.99458900] ======= FleaPHP End (elapsed: 2.085395 seconds) =======
+

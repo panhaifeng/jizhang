@@ -1,0 +1,2 @@
+ALTER TABLE jichu_product ADD COLUMN warpShrink smallint(2) NOT NULL COMMENT '经向缩率';
+ALTER TABLE jichu_product ADD COLUMN weftShrink smallint(2) NOT NULL COMMENT '纬向缩率';

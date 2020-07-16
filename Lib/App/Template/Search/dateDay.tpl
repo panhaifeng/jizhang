@@ -1,0 +1,1 @@
+日期：<input name="dateDay" type="text" id="dateDay" value="{$arr_condition.dateDay}" size="8" onclick="calendar()" emptyText='选择日期' placeholder='选择日期'>

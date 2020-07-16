@@ -1,0 +1,3 @@
+ALTER TABLE `cangku_fawai2product`
+ADD COLUMN `chanliangId`  int(11) NULL COMMENT '产量id' AFTER `dengjidanjia`;
+

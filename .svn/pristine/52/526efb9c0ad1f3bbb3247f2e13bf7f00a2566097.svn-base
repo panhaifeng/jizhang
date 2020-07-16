@@ -1,0 +1,106 @@
+//节点接口说明
+/*
+$("#tree").getTSVs()  //获取所有选中的节点的Value数组
+$("#tree").getTSNs()  //获取所有选中的节点的Item数组
+$("#tree").getTCT()   // 获取当前节点的Item数组
+$("#tree").reflash()  // 刷新节点数据
+$('#tree_2_cb').click(),模拟id=2的checkbox控件的点击事件
+var cItem = $('#tree').getItem(id);//根据id值,取得某个节点对象。
+$("#tree").treeview(o);刷新整个树，通过改变o.data的值，再调用该方法，可方便的刷新树。
+$("#tree").changeCheckstate(itemId,state);//修改某个itemId的节点的checkstate属性为state.
+
+配置对象说明
+    var dfop ={
+	method: "POST",//ajax方式
+	datatype: "json",//数据源格式
+	url: false,//展开时获取子节点的url
+	cbiconpath: "Resource/Script/treeview/images/icons/", //icon路径
+	icons: ["checkbox_0.gif", "checkbox_1.gif", "checkbox_2.gif"],//checkbox的3种状态的图片
+	showcheck: false, //是否显示checkbox           
+	oncheckboxclick: false, //当checkstate状态变化时所触发的事件，但是不会触发因级联选择而引起的变化
+			onexpand: false,//节点展开后触发的函数
+	onnodeclick: false,//节点点击后触发的事件
+	cascadecheck: true,
+	data: null,//数据源
+	clicktoggle: true, //点击节点展开和收缩子节点
+	theme: "bbit-tree-arrows" //bbit-tree-lines ,bbit-tree-no-lines,bbit-tree-arrows
+    }
+*/
+treedata = [{ 
+	"id": "0",
+	"text": "中国",
+	"value": "86",
+	"showcheck": true,
+	"complete": true,
+	"isexpand": true,
+	"checkstate": 0,
+	"hasChildren": true,
+	"ChildNodes": [{ 
+			"id": "1",//节点id
+			"text": "北京市",//标签文本
+			"value": "11",//值
+			"showcheck": true,//是否显示checkbox
+			"isexpand": false,//是否展开,
+			"checkstate": 0,//是否被选中,0空 1,全部选中 2部分选中
+			"hasChildren": true,//是否有子节点
+			"ChildNodes": null,//子节点,仅当complete为true时起作用，如果使用ajax获得子节点，这里定义的将不起作用
+			"complete": false //是否已经完成，if true:不再进行递归检索，否则将搜索子项并展开,如果是ajax进行检索，childNodes属性将不再起作用
+		},{ 
+			"id": "2",
+			"text": "天津市",
+			"value": "12",
+			"showcheck": true,
+			"isexpand": false,
+			"checkstate": 0,
+			"hasChildren": true,
+			"ChildNodes": null,
+			"complete": false 
+		},{ 
+			"id": "3",
+			"text": "河北省",
+			"value": "13",
+			"showcheck": true,
+			"isexpand": false,
+			"checkstate": 0,
+			"hasChildren": true,
+			"ChildNodes": null,
+			"complete": false 
+		},{ "id": "4",
+			"text": "山西省",
+			"value": "14",
+			"showcheck": true,
+			"isexpand": false,
+			"checkstate": 0,
+			"hasChildren": true,
+			"ChildNodes": null,
+			"complete": false 
+		},{ "id": "5",
+			"text": "内蒙古自治区",
+			"value": "15",
+			"showcheck": true,
+			"isexpand": false,
+			"checkstate": 0,
+			"hasChildren": true,
+			"ChildNodes": null,
+			"complete": false 
+		},{ "id": "6",
+			"text": "辽宁省",
+			"value": "21",
+			"showcheck": true,
+			"isexpand": false,
+			"checkstate": 0,
+			"hasChildren": true,
+			"ChildNodes": null,
+			"complete": false 
+		},{ "id": "29",
+			"text": "澳门特别行政区",
+			"value": "91",
+			"showcheck": true,
+			"isexpand": false,
+			"checkstate": 0,
+			"hasChildren": false,
+			"ChildNodes": null,
+			"complete": false					
+	}]
+}];
+            

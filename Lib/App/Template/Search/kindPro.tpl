@@ -1,0 +1,42 @@
+<select name="kindPro" id="kindPro">
+    <option value=''>物料类别</option>
+    <option value='坯纱' {if $arr_condition.kindPro == '坯纱'} selected="selected" {/if}>坯纱</option>
+    <option value='色纱' {if $arr_condition.kindPro == '色纱'} selected="selected" {/if}>色纱</option>
+    <option value='其他' {if $arr_condition.kindPro == '其他'} selected="selected" {/if}>其他</option>
+    <option value='罗纹' {if $arr_condition.kind == '罗纹'} selected="selected" {/if}>【罗纹（81）】</option>
+    <option value='汗布' {if $arr_condition.kind == '汗布'} selected="selected" {/if}>【汗布（51）】</option>
+    <option value='卫衣' {if $arr_condition.kind == '卫衣'} selected="selected" {/if}>【卫衣（32）】</option>
+    <option value='双面机' {if $arr_condition.kind == '双面机'} selected="selected" {/if}>双面机</option>
+    <option value='双面素色提花' {if $arr_condition.kind == '双面素色提花'} selected="selected" {/if}>【双面素色提花（61）】</option>
+    <option value='双面条子素色提花' {if $arr_condition.kind == '双面条子素色提花'} selected="selected" {/if}>【双面条子素色提花（62）】</option>
+    <option value='空气层' {if $arr_condition.kind == '空气层'} selected="selected" {/if}>【双面空气层（63）】</option>
+    <option value='复合毛圈' {if $arr_condition.kind == '复合毛圈'} selected="selected" {/if}>【复合毛圈（13）】</option>
+    <option value='正斜纹' {if $arr_condition.kind == '正斜纹'} selected="selected" {/if}>【正斜纹（41）】</option>
+    <option value='斜纹' {if $arr_condition.kind == '斜纹'} selected="selected" {/if}>【斜纹（42）】</option>
+    <option value='彩色' {if $arr_condition.kind == '彩色'} selected="selected" {/if}>彩色</option>
+    <option value='直条毛圈' {if $arr_condition.kind == '直条毛圈'} selected="selected" {/if}>直条毛圈</option>
+    <option value='格子与条子毛圈' {if $arr_condition.kind == '格子与条子毛圈'} selected="selected" {/if}>【格子与条子毛圈（12）】</option>
+    <option value='斜毛圈' {if $arr_condition.kind == '斜毛圈'} selected="selected" {/if}>【斜毛圈（21）】</option>
+    <option value='小毛圈' {if $arr_condition.kind == '小毛圈'} selected="selected" {/if}>【小毛圈（31）】</option>
+    <option value='大毛圈' {if $arr_condition.kind == '大毛圈'} selected="selected" {/if}>【大毛圈（11）】</option>
+    <option value='大斜纹' {if $arr_condition.kind == '大斜纹'} selected="selected" {/if}>【大斜纹（43）】</option>
+    <option value='印花系列' {if $arr_condition.kind == '印花系列'} selected="selected" {/if}>印花系列</option>
+    <option value='提花布' {if $arr_condition.kind == '提花布'} selected="selected" {/if}>提花布</option>
+    <option value='双色提花布' {if $arr_condition.kind == '双色提花布'} selected="selected" {/if}>【双色提花布（91）】</option>
+    <option value='多色提花布' {if $arr_condition.kind == '多色提花布'} selected="selected" {/if}>【多色提花布（92）】</option>
+    <option value='楼梯提花布' {if $arr_condition.kind == '楼梯提花布'} selected="selected" {/if}>【楼梯提花布（94）】</option>
+    <option value='罗马布' {if $arr_condition.kind == '罗马布'} selected="selected" {/if}>【双面罗马布（65）】</option>
+    <option value='复合布' {if $arr_condition.kind == '复合布'} selected="selected" {/if}>复合布</option>
+    <option value='夹丝布' {if $arr_condition.kind == '夹丝布'} selected="selected" {/if}>夹丝布</option>
+    <option value='夹丝提花布' {if $arr_condition.kind == '夹丝提花布'} selected="selected" {/if}>【夹丝提花布（93）】</option>
+    <option value='不倒绒' {if $arr_condition.kind == '不倒绒'} selected="selected" {/if}>【不倒绒系列（64）】</option>
+    <option value='彩条及其他汗布' {if $arr_condition.kind == '彩条及其他汗布'} selected="selected" {/if}>【彩条及其他汗布（52）】</option>
+    <option value='双面珠地布' {if $arr_condition.kind == '双面珠地布'} selected="selected" {/if}>【双面珠地布（66）】</option>
+    <option value='客户来样' {if $arr_condition.kind == '客户来样'} selected="selected" {/if}>客户来样</option>
+    <option value='单面提花汗布' {if $arr_condition.kind == '单面提花汗布'} selected="selected" {/if}>【单面提花汗布（71）】</option>
+    <option value='单面提花毛圈' {if $arr_condition.kind == '单面提花毛圈'} selected="selected" {/if}>【单面提花毛圈（72）】</option>
+    <option value='单面提花珠地' {if $arr_condition.kind == '单面提花珠地'} selected="selected" {/if}>【单面提花珠地（73）】</option>
+    <option value='单面提花网眼' {if $arr_condition.kind == '单面提花网眼'} selected="selected" {/if}>【单面提花网眼（74）】</option>
+    <option value='成人装' {if $arr_condition.kind == '成人装'} selected="selected" {/if}>【成人装（99）】</option>
+    <option value='本厂开发' {if $arr_condition.kind == '本厂开发'} selected="selected" {/if}>本厂开发</option>
+</select>

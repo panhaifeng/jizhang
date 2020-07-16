@@ -1,0 +1,2 @@
+ALTER TABLE `cangku_common_ruku2product`
+MODIFY COLUMN `ganghao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '缸号' AFTER `productId`;

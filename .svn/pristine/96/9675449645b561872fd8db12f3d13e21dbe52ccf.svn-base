@@ -1,0 +1,3 @@
+ALTER TABLE `cangku_fawai`
+ADD COLUMN `type`  int(10) NOT NULL DEFAULT 0 COMMENT '区分新数据' AFTER `dt`;
+

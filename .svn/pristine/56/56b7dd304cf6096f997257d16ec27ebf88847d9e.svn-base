@@ -1,0 +1,20 @@
+CREATE TABLE `shengchan_planpj` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `planCode` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '计划单号',
+  `planDate` date NOT NULL COMMENT '计划日期',
+  `shengchanId` int(11) DEFAULT NULL COMMENT '生产计划Id',
+  `ord2proId` int(11) NOT NULL COMMENT '订单明细Id',
+  `jitaiCnt` int(11) DEFAULT NULL COMMENT '机台数',
+  `pishuCnt` int(11) DEFAULT NULL COMMENT '匹数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1366 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='坯检计划';
+
+CREATE TABLE `shengchan_planpj2son` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `planId` int(11) NOT NULL COMMENT '坯检计划主表Id',
+  `jihuaDate` date DEFAULT NULL COMMENT '计划日期',
+  `jitai` varchar(20) COLLATE utf8_bin DEFAULT NULL COMMENT '机台',
+  `pishu` int(11) NOT NULL COMMENT '匹数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1394 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='坯检计划明细';
+

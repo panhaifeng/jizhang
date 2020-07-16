@@ -1,0 +1,2 @@
+ALTER TABLE `cangku_common_chuku2product`
+ADD INDEX `plan2touliaoId` (`plan2touliaoId`) USING BTREE ;

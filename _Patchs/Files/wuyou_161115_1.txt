@@ -1,0 +1,3 @@
+ALTER TABLE `shengchan_plan2touliao`
+MODIFY COLUMN `ganghao`  varchar(20) NOT NULL COMMENT '缸号' AFTER `cnt`,
+ADD COLUMN `pihao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '批号' AFTER `cnt`;

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>条码打印</title>
+<link href="Resource/Css/Print.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="Resource/Script/jquery.1.9.1.js"></script>
+<script language="javascript" src="Resource/Script/Print/2017.01.04/LodopFuncs.js"></script>
+<object id="LODOP" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0>
+	<param name="CompanyName" value="常州易奇信息科技有限公司">
+	<param name="License" value="664717080837475919278901905623">
+	<embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0 pluginspage="install_lodop.exe"></embed>
+</object>
+<style type="text/css">
+{literal}
+.tdList td{height:40px;}
+.fuckTd span{font-weight:normal}
+#rsTable td{font-size:14px;}
+.xhx {width:200px; border-bottom:1px solid #000;}
+</style>
+{/literal}
+</head>
+
+<body onafterprint="return window_onafterprint()" onbeforeprint="return window_onbeforeprint()" style="text-align:center">
+<div></div>
+<script language="javascript">
+//传递的参数处理
+var obj ={$aRow|@json_encode};
+var guigeLength = {$guigeLength};
+{literal}
+$(function(){
+	setTimeout(prn1_preview,500);
+})
+function prn1_preview() {
+	//dump(obj);
+	CreateOneFormPage(obj);
+	// LODOP.PRINT_DESIGN();return false;
+	LODOP.PREVIEW();//return false;
+	//LODOP.PRINT();
+	window.close();
+}
+var LODOP;
+function CreateOneFormPage(obj){
+		LODOP=getLodop(document.getElementById('LODOP'),document.getElementById('LODOP_EM'));
+
+		LODOP.PRINT_INITA(0,5,522,333,"");
+		LODOP.SET_PRINT_PAGESIZE(1,"60mm","40mm","条码打印");
+
+		// LODOP.SET_PRINT_STYLE("FontSize",14);
+		// LODOP.SET_PRINT_STYLE("Alignment",2);
+		// LODOP.SET_PRINT_STYLE("Bold",1);
+		// LODOP.ADD_PRINT_TEXT(2,2,215,23,"沃丰纺织");
+		// LODOP.SET_PRINT_STYLE("FontSize",8);
+		// LODOP.SET_PRINT_STYLE("Alignment",2);
+		// LODOP.SET_PRINT_STYLE("Bold",0);
+		// // LODOP.ADD_PRINT_TEXT(20,-6,258,23,"WOFENG DYEING CO.LTD");
+		// LODOP.SET_PRINT_STYLE("FontName","黑体");
+		// LODOP.SET_PRINT_STYLE("FontSize",8);
+		// LODOP.SET_PRINT_STYLE("Alignment",0);
+
+		// LODOP.ADD_PRINT_TEXT(30,4,80,20,"编号 Art");
+		// LODOP.ADD_PRINT_TEXT(47,4,80,20,"品名 Dcrp");
+		// LODOP.ADD_PRINT_TEXT(64,4,80,20,"规格 Spec");
+		// LODOP.ADD_PRINT_TEXT(81,4,80,20,"成分 Comp");
+		// LODOP.ADD_PRINT_TEXT(98,4,80,20,"门幅 Width");
+		// LODOP.ADD_PRINT_TEXT(115,4,80,20,"克重 Wei");
+
+		// LODOP.SET_PRINT_STYLE("FontName","黑体");
+		// LODOP.SET_PRINT_STYLE("FontSize",10);
+		// //编号
+		// LODOP.ADD_PRINT_TEXT(30,71,170,20,obj.proCode=obj.proCode!=null?obj.proCode:'');
+		// //品名
+		// LODOP.ADD_PRINT_TEXT(47,71,170,20,obj.proName=obj.proName!=null?obj.proName:'');
+		// //规格
+		// LODOP.ADD_PRINT_TEXT(64,71,220,20,obj.guige=obj.guige!=null?obj.guige:'');
+		// //成分
+		// LODOP.ADD_PRINT_TEXT(81,71,220,20,obj.chengFen=obj.chengFen!=null?obj.chengFen:'');
+		// //门幅
+		// LODOP.ADD_PRINT_TEXT(98,71,170,20,obj.menfu=obj.menfu!=null?obj.menfu+' cm':'');
+		// //克重
+		// LODOP.ADD_PRINT_TEXT(115,71,170,20,obj.kezhong=obj.kezhong!=null?obj.kezhong+' g/㎡':'');
+		// // LODOP.ADD_PRINT_BARCODE(128,9,209,40,"128A","WF721721T-FH");
+		// LODOP.ADD_PRINT_BARCODE(128,9,209,40,"128A",obj.proCode);
+		// LODOP.PRINT_DESIGN();
+
+
+		// LODOP.ADD_PRINT_TEXT(2,-3,215,23,"沃丰纺织");
+		// LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+		// LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+		// LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+
+		// LODOP.ADD_PRINT_TEXT(30,-1,80,20,"编号");
+		// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+		// LODOP.ADD_PRINT_TEXT(47,-1,80,20,"品名");
+		// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+		// LODOP.ADD_PRINT_TEXT(64,-1,80,20,"规格");
+		// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+		// LODOP.ADD_PRINT_TEXT(81,-1,80,20,"成分");
+		// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+		// LODOP.ADD_PRINT_TEXT(98,-1,80,20,"门幅");
+		// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+		// LODOP.ADD_PRINT_TEXT(115,-1,80,20,"克重");
+		// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+		// //编号
+		// LODOP.ADD_PRINT_TEXT(30,36,180,20,obj.proCode=obj.proCode!=null?obj.proCode:'');
+		// //品名
+		// LODOP.ADD_PRINT_TEXT(47,34,180,20,obj.proName=obj.proName!=null?obj.proName:'');
+		// //规格
+		// LODOP.ADD_PRINT_TEXT(64,33,180,20,obj.guige=obj.guige!=null?obj.guige:'');
+		// //成分
+		// LODOP.ADD_PRINT_TEXT(81,34,181,20,obj.chengFen=obj.chengFen!=null?obj.chengFen:'');
+		// //门幅
+		// LODOP.ADD_PRINT_TEXT(98,34,181,20,obj.menfu=obj.menfu!=null?obj.menfu:'');
+		// //克重
+		// LODOP.ADD_PRINT_TEXT(115,31,183,20,obj.kezhong=obj.kezhong!=null?obj.kezhong:'');
+		// LODOP.ADD_PRINT_BARCODE(128,4,209,40,"128A",obj.proCode);
+		// //设计模式
+		// LODOP.PRINT_DESIGN();
+
+			LODOP.PRINT_INITA(0,5,522,333,"");
+			LODOP.SET_PRINT_PAGESIZE(1,600,400,"条码打印");
+			LODOP.ADD_PRINT_TEXT(7,-8,215,23,"金马布业");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",13);
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(25,-3,90,20,"No:");
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(39,-3,90,20,"Item:");
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+
+			LODOP.ADD_PRINT_TEXT(53,-3,90,20,"Comp:");
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(67,-3,90,20,"Width:");
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(81,-3,90,20,"Weight:");
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+
+			//编号
+			LODOP.ADD_PRINT_TEXT(25,45,180,14,obj.proCode=obj.proCode!=null?obj.proCode:'');
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			//品名
+			LODOP.ADD_PRINT_TEXT(39,45,180,14,obj.proName=obj.proName!=null?obj.proName:'');
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+
+			//成分
+			LODOP.ADD_PRINT_TEXT(53,45,200,14,obj.chengFen=obj.chengFen!=null?obj.chengFen:'');
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			//门幅
+			LODOP.ADD_PRINT_TEXT(67,45,181,14,obj.menfu=obj.menfu!=null?obj.menfu:'');
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			//克重
+			LODOP.ADD_PRINT_TEXT(81,45,183,14,obj.kezhong=obj.kezhong!=null?obj.kezhong:'');
+			LODOP.SET_PRINT_STYLE("FontName","宋体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			//条码
+			LODOP.ADD_PRINT_BARCODE(94,4,209,30,"128A",obj.proCode);
+			// //设计模式
+			// LODOP.PRINT_DESIGN();
+
+			// LODOP.ADD_PRINT_TEXT(32,67,180,20,"YF");
+			// LODOP.ADD_PRINT_TEXT(49,68,180,20,"运费");
+			// LODOP.ADD_PRINT_TEXT(66,69,180,20,"运费");
+			// LODOP.ADD_PRINT_TEXT(83,69,181,20,"运费");
+			// LODOP.ADD_PRINT_TEXT(100,69,181,20,"运费");
+			// LODOP.ADD_PRINT_TEXT(117,69,183,20,"运费");
+			// LODOP.ADD_PRINT_BARCODE(130,4,209,40,"128A","YF");
+			// LODOP.ADD_PRINT_TEXT(20,61,100,20,"Wo Feng Textile");
+			// LODOP.SET_PRINT_STYLEA(0,"FontName","隶书");
+			// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			// LODOP.ADD_PRINT_BARCODE(130,4,209,40,"128A",obj.proCode);
+			// LODOP.ADD_PRINT_TEXT(20,61,100,20,"Wo Feng Textile");
+			// LODOP.SET_PRINT_STYLEA(0,"FontName","隶书");
+			// LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+}
+
+</script>
+{/literal}
+
+</body>
+</html>

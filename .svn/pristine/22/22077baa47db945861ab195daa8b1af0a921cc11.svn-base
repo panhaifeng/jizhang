@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>*</Author>
+  <LastAuthor>eqinfo</LastAuthor>
+  <LastPrinted>2014-03-04T04:40:52Z</LastPrinted>
+  <Created>2013-07-02T01:07:00Z</Created>
+  <LastSaved>2014-07-01T09:38:56Z</LastSaved>
+  <Company>***</Company>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-9.1.0.4716</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10350</WindowHeight>
+  <WindowWidth>20940</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="m60248378">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="m60248398">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s21">
+   <Borders/>
+  </Style>
+  <Style ss:ID="s23">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="24" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s25">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s29">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s32">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s33">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="0%"/>
+  </Style>
+  <Style ss:ID="s36">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
+   <Borders/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s37">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s38">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s39">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s40">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s41">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+   <NumberFormat ss:Format="0%"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="27" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:StyleID="s21" ss:AutoFitWidth="0" ss:Width="102"/>
+   <Column ss:StyleID="s21" ss:AutoFitWidth="0" ss:Width="179.25"/>
+   <Column ss:StyleID="s21" ss:AutoFitWidth="0" ss:Width="222.75"/>
+   <Row ss:AutoFitHeight="0" ss:Height="35.25">
+    <Cell ss:MergeAcross="2" ss:StyleID="s23"><Data ss:Type="String">沃 丰 纺 织 定 型 联 系 单</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:StyleID="s24"><Data ss:Type="String">加工单位：</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$res.compName}</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">送货日期：{$arr.jiaohuoDate}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:StyleID="s24"><Data ss:Type="String">品   名：</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$waixie2pro.proName}</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">规格：{$waixie2pro.guige}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:MergeDown="3" ss:StyleID="m60248378"><Data ss:Type="String">    坯布数据    </Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">下机门幅</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$s.xiajiMenfu} cm</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s26"><Data ss:Type="String">下机克重</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$s.xiajiKezhong} g/m2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s26"><Data ss:Type="String">发出数量</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$s.fachuCnt} KG</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s26"><Data ss:Type="String">发出件数</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$s.fachuJianshu} 件</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:MergeDown="1" ss:StyleID="s32"><Data ss:Type="String">成布要求</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">要求门幅/克重</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$s.yaoqiuMenfu} cm / {$s.yaoqiuKezhong} g/m2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s26"><Data ss:Type="String">要求缩率</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">经向:- {$s.yaoqiuSuolvJingxiang} % 维向:- {$s.yaoqiuSuolvWeixiang} %</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:MergeDown="2" ss:StyleID="m60248398"><Data ss:Type="String">成品实际数据</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">实际门幅/克重</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$s.shijiMenfu} cm / {$s.shijiKezhong} g/m2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s26"><Data ss:Type="String">实际缩率</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">经向:- {$s.shijiSuolvJingxiang} % 维向:- {$s.shijiSuolvWeixiang} %</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s26"><Data ss:Type="String">洗后门幅/洗后克重</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{$s.xihouMenfu} cm / {$s.xihouKezhong} g/m2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:StyleID="s36"><Data ss:Type="String">送货人：</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">签收人：</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">         取货日期：          </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="39"/>
+   <Row ss:AutoFitHeight="0" ss:Height="43.5">
+    <Cell ss:MergeAcross="2" ss:StyleID="s23"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s40"/>
+    <Cell ss:StyleID="s40"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s40"/>
+    <Cell ss:StyleID="s40"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:MergeDown="3" ss:StyleID="s29"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s39"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s39"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s39"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:MergeDown="1" ss:StyleID="s29"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s39"/>
+    <Cell ss:StyleID="s41"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:MergeDown="2" ss:StyleID="s29"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s39"/>
+    <Cell ss:StyleID="s41"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.9375">
+    <Cell ss:Index="2" ss:StyleID="s37"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="20.25">
+    <Cell ss:StyleID="s36"/>
+    <Cell ss:StyleID="s37"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51180555555555551"/>
+    <Footer x:Margin="0.51180555555555551"/>
+    <PageMargins x:Bottom="0.59027777777777779" x:Left="0.59027777777777779"
+     x:Right="0.35416666666666669" x:Top="0.59027777777777779"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <PageBreakZoom>60</PageBreakZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>14</ActiveRow>
+     <RangeSelection>R15C1:R15C3</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <Table ss:ExpandedColumnCount="0" ss:ExpandedRowCount="0" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25"/>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <PageBreakZoom>60</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <Table ss:ExpandedColumnCount="0" ss:ExpandedRowCount="0" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25"/>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <PageBreakZoom>60</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

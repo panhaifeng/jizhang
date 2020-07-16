@@ -1,0 +1,1 @@
+ALTER TABLE jichu_product ADD COLUMN clothType varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '机型';

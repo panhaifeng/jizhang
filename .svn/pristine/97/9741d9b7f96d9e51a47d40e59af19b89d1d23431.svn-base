@@ -1,0 +1,96 @@
+@charset "utf-8";
+html,body, form, ul, li{margin:0px; padding:0px;}
+body{
+	height:100%; width:100%; 
+	font-size:12px; font-family:"宋体"; 
+	text-align:center;
+	margin-top:5px; margin-left:0px; margin-right:5px;
+}
+td{font-size:12px; font-family:"宋体";}
+a{}
+a:link{color:#0000FF;text-decoration:none;}
+a:visited{color:#0000FF;text-decoration:none;}
+a:hover{color:#0000FF;text-decoration:underline;}
+
+fieldset{padding:10px; color:#CCCCCC; text-align:left;}
+fieldset legend{font-size:12px; font-family:"宋体"; color:#666666; margin-bottom:10px;}
+
+input {
+	/*for IE*/
+	border: 1px solid #7F9DB9;
+	height: 22px;
+	line-height: 20px;
+	padding-left:2px;
+}
+.checkbox{border:0px;}
+textarea{border:1px solid #7F9DB9}
+	
+.caption{font-weight:bold; height:30px; font-size:16px;}
+.bitian{color:#FF0000;}
+
+.tableHaveBorder{
+	border-top:1px solid #999;
+	border-left:1px solid #999; 	
+	border-collapse:collapse; 
+	text-align:center
+}
+.tableHaveBorder td {border-bottom:1px solid #999; border-right:1px solid #999; }
+.tableHaveBorder tr {height:20px;}
+.tableHaveBorder .th {background-color:#CCCCCC}
+
+
+#mainTable{text-align:left;width:100%;}
+#mainTable input, select{width:150px; font-size:12px;}
+#mainTable .title{text-align:right; width:100px;}
+#mainTable textarea{width:100%; height:40px;}
+select optgroup { color:#00C;}
+select optgroup option{ color:#000000;}
+/*
+#listTable {width:100%;}
+#listTable input{width:80px;}
+#listTable .button{width:50px;}
+#listTable .th{background-color:#D4E2F4}
+#listTable .heji{background-color:#FEF4C8}*/
+
+
+#buttonTable{clear:both; margin:auto;}
+#buttonTable input{height:30px; padding-left:15px; padding-right:15px;}
+#buttonTable input{display:inline-block; padding:1px 12px; text-decoration:none; color: #111111 !important;border: solid 1px #666;border-radius: 3px; background: #CCCCCC; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CCCCCC');
+background: linear-gradient(top, #FFF, #CCCCCC); background: -moz-linear-gradient(top, #FFF, #CCCCCC); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#CCCCCC)); text-shadow: 0px 1px 1px rgba(255, 255, 255, 1); box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .09); -moz-transition:-moz-box-shadow linear .2s;
+-webkit-transition: -webkit-box-shadow linear .2s;
+transition: box-shadow linear .2s;
+white-space: nowrap; font-size:14px;}
+._button{height:24px; padding-left:15px; padding-right:15px;display:inline-block; padding:1px 12px; text-decoration:none; color: #111111 !important;border: solid 1px #666;border-radius: 3px; background: #CCCCCC; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CCCCCC');
+background: linear-gradient(top, #FFF, #CCCCCC); background: -moz-linear-gradient(top, #FFF, #CCCCCC); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#CCCCCC)); text-shadow: 0px 1px 1px rgba(255, 255, 255, 1); box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .09); -moz-transition:-moz-box-shadow linear .2s;
+-webkit-transition: -webkit-box-shadow linear .2s;
+transition: box-shadow linear .2s;
+white-space: nowrap;}
+
+.tb001{text-align:left; width:100%;}
+.tb001 input, select{width:150px; font-size:12px;}
+.tb001 .title{text-align:right; width:100px;}
+.tb001 textarea{width:100%; height:40px;}
+
+.inputNoborder{border:0px;}
+.titleBlod{font-weight:bold;}
+
+.mainTableStyle100{text-align:left;width:100%;}
+.mainTableStyle100 input, select{font-size:12px;}
+.mainTableStyle100 .title{text-align:right; height:20px; font-family:"宋体"; font-weight:normal;}
+.mainTableStyle100 textarea{width:100%; height:40px;}
+.mainTableStyle100 td{font-size:12px; width:12.5%; color:#333333;}
+
+.listTableStyle100{width:100%;}
+.listTableStyle100 input{width:80px;/**/}
+.listTableStyle100 .button{width:50px;}
+.listTableStyle100 .th{background-color:#D4E2F4; font-size:12px; height:25px;}
+.listTableStyle100 .th td{padding-left:5px;}
+.listTableStyle100 .heji{background-color:#FEF4C8}
+
+.inputHaveNoBorder{border:0px;}
+
+.memoTable td{}
+.memoTable textarea{height:40px; width:300px;}
+
+/*着重提醒字体，比如“是否完成”“了机”之类*/
+.remindText{color:#000; font-size:12px; font-weight:bold;}

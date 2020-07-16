@@ -1,0 +1,8 @@
+<?php
+load_class('TMIS_TableDataGateway');
+class Model_Check_Main2flaw extends TMIS_TableDataGateway {
+    var $tableName = 'check_main2flaw';
+    var $primaryKey = 'id';
+    var $force_master =true;
+}
+?>

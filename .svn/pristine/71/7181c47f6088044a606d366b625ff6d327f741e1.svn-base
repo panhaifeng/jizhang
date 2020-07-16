@@ -1,0 +1,24 @@
+CREATE TABLE `sample_caiyang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sampleId` int(11) NOT NULL,
+  `proCode` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '产品编号',
+  `chukuDate` date NOT NULL,
+  `caiyangren` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '采样人',
+  `clientName` varchar(40) COLLATE utf8_bin NOT NULL COMMENT '客户名称',
+  `chukuCnt` decimal(10,1) NOT NULL COMMENT '采样数',
+  `chukuCang` decimal(10,1) NOT NULL COMMENT '仓库出库数',
+  `memo` varchar(100) COLLATE utf8_bin NOT NULL COMMENT '备注',
+  `creater` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '创建人',
+  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `danjia` decimal(10,6) NOT NULL COMMENT '单价',
+  `money` decimal(15,6) NOT NULL COMMENT '金额',
+  `yunfei` decimal(15,6) NOT NULL COMMENT '运费',
+  `kucunWei` varchar(50) CHARACTER SET utf8 NOT NULL COMMENT '库存位置',
+  `ganghao` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '缸号',
+  PRIMARY KEY (`id`),
+  KEY `sampleId` (`sampleId`),
+  KEY `chukuDate` (`chukuDate`),
+  KEY `employId` (`caiyangren`),
+  KEY `clientName` (`clientName`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='采样登记表';
+

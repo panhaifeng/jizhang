@@ -1,0 +1,1 @@
+<input name="ExpectCode" type="text" id="ExpectCode" value="{$arr_condition.ExpectCode}" size="10" emptyText='条码' placeholder='条码'/>

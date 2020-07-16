@@ -1,0 +1,2 @@
+ALTER TABLE `jichu_product`
+ADD COLUMN `creater`  varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '录入人' AFTER `isStop`;

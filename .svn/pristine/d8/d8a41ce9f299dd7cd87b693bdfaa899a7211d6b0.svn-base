@@ -1,0 +1,1 @@
+<input name="proCode" type="text" id="proCode" value="{$arr_condition.proCode}" size="10" emptyText='产品编码' placeholder='产品编码'>

@@ -1,0 +1,19 @@
+{
+    "url":"http://localhost/ec_oubao/index.php/api",
+    "//":"该token必须和响应方提供的token匹配才能获得正常数据,ec中的响应token一般在config/certi.php中"
+    ,"token":"6a1b8e9cae6d0a3a8c3628de74f53ecec4b5735dcb805c57e3e2c3e15fdee643"
+    ,"type":"json"
+    ,"version":"1.0"
+    ,"data":{
+
+        "测试相关":{
+            "apioubao.erp.response.test":{
+                "name":"测试api"
+                ,"desc":"测试api"
+                ,"params":{
+                   "send_data":"send_data"
+                }
+            }
+        }
+    }
+}

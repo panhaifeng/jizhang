@@ -1,0 +1,3 @@
+ALTER TABLE `shengchan_chanliang`
+ADD COLUMN `zhiJiCode`  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT 'jizhiId废弃，新增机台名称' AFTER `beforeCnt`;
+

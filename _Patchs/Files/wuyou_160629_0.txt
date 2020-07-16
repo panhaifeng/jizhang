@@ -1,0 +1,2 @@
+ALTER TABLE `trade_order`
+MODIFY COLUMN `overflow`  varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '溢短装' AFTER `bizhong`;

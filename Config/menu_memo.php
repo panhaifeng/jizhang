@@ -1,0 +1,85 @@
+<?php
+$_sysMenuMemo = array(
+	'100'=>array(
+		'text'=>'特殊权限',
+		'children'=>array(
+			'100-1'=>array('text'=>'查看所有客户'),
+			'100-2'=>array('text'=>'原料调整库存'),
+			'100-3'=>array('text'=>'原料库存调拨'),
+			'100-4'=>array('text'=>'成品调整库存'),
+			'100-5'=>array('text'=>'成品库存调拨'),
+
+			'100-6'=>array('text'=>'订单查询导出'),
+			'100-7'=>array('text'=>'色坯纱入库导出'),
+			'100-8'=>array('text'=>'色坯纱销售出库导出'),
+			'100-9'=>array('text'=>'成品入库导出'),
+			'100-10'=>array('text'=>'应收查询导出'),
+		)
+	),
+	'1-2'=>array(
+		// 'text'=>'特殊权限',
+		'children'=>array(
+			'1-2-6'=>array('text'=>'查看'),
+			'1-2-1'=>array('text'=>'编辑'),
+			'1-2-2'=>array('text'=>'删除'),
+			'1-2-3'=>array('text'=>'看客户'),
+			'1-2-4'=>array('text'=>'看金额'),
+			'1-2-5'=>array('text'=>'审核'),
+			'1-2-7'=>array('text'=>'完成'),
+		)
+	),
+	'1-3'=>array(
+		'children'=>array(
+			'1-3-1'=>array('text'=>'业务员审核'),
+			'1-3-2'=>array('text'=>'跟单审核'),
+			'1-3-3'=>array('text'=>'织造审核'),
+			'1-3-4'=>array('text'=>'定型审核'),
+			'1-3-5'=>array('text'=>'成品审核'),
+			'1-3-6'=>array('text'=>'生产负责审核'),
+			'1-3-7'=>array('text'=>'最终审核'),
+		)
+	),
+	//添加了查看布档案纱织比例和查看布档案线长的权限设置，2015-09-10，by liuxin
+	'6-4'=>array(
+		'children'=>array(
+			'6-4-1'=>array('text'=>'查看'),
+			'6-4-2'=>array('text'=>'修改'),
+			'6-4-6'=>array('text'=>'删除'),
+			'6-4-4'=>array('text'=>'查看布档案纱织比例'),
+			'6-4-5'=>array('text'=>'查看布档案线长'),
+			'6-4-3'=>array('text'=>'报价'),
+        	'6-4-7'=>array('text'=>'单价'),
+		)
+	),
+	'6-1'=>array(
+		'children'=>array(
+			'6-1-1'=>array('text'=>'修改'),
+			'6-1-2'=>array('text'=>'删除'),
+			'6-1-3'=>array('text'=>'查看'),
+		)
+	),
+	'6-3'=>array(
+		'children'=>array(
+			'6-3-1'=>array('text'=>'修改'),
+			'6-3-2'=>array('text'=>'删除'),
+			'6-3-3'=>array('text'=>'查看'),
+		)
+	),
+	'3-1-17'=>array(
+		'children'=>array(
+			'3-1-17-1'=>array('text'=>'修改'),
+			'3-1-17-2'=>array('text'=>'删除'),
+			'3-1-17-3'=>array('text'=>'查看'),
+			'3-1-17-4'=>array('text'=>'翻单'),
+			'3-1-17-5'=>array('text'=>'打印'),
+		)
+	),
+	'14-3'=>array(
+		'children'=>array(
+			'14-3-1'=>array('text'=>'修改'),
+			'14-3-2'=>array('text'=>'删除'),
+			'14-3-3'=>array('text'=>'查看'),
+		)
+	),
+);
+?>

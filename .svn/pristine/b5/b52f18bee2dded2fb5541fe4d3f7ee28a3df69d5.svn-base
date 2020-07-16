@@ -1,0 +1,4 @@
+ALTER TABLE `caiwu_ar_guozhang`
+ADD COLUMN `songhuoCode`  varchar(30) NOT NULL COMMENT '送货单号' AFTER `dt`;
+ALTER TABLE `caiwu_ar_guozhang`
+ADD COLUMN `cntJian`  int(11) NOT NULL COMMENT '件数' AFTER `songhuoCode`;

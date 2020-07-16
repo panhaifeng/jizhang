@@ -1,0 +1,1 @@
+<input name="key" type="text" id="key" value="{$arr_condition.key}" size="10" emptyText='关键字' placeholder='关键字'/>

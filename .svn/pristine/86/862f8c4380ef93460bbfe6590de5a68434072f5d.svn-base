@@ -1,0 +1,37 @@
+CREATE TABLE `check_config` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `item` varchar(20) NOT NULL COMMENT '配置项英文名称',
+  `itemName` varchar(50) NOT NULL COMMENT '配置中文项名称',
+  `value` varchar(100) NOT NULL COMMENT '配置项的值',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='检验配置表';
+
+CREATE TABLE `check_cusinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `fieldName` varchar(20) NOT NULL COMMENT '属性名称',
+  `fieldType` varchar(20) NOT NULL COMMENT '属性类别(选项select/文本框text/单选框radio)',
+  `fieldValue` varchar(200) DEFAULT NULL COMMENT '属性值(为select/radio时用英文逗号'',''分开)',
+  `defaultText` varchar(50) DEFAULT NULL COMMENT '默认文本或选中项',
+  `notNull` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否必填(0否1是)',
+  `clear` tinyint(1) NOT NULL DEFAULT '0' COMMENT '自定义字段默认值的填充选项：(0不填充 1保留上一次的值 2填充为默认值)',
+  `sort` int(2) NOT NULL COMMENT '排序',
+  `type` varchar(10) NOT NULL COMMENT '成检和坯检的区分字段 cj 成检，pj 坯检',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='自定义属性配置表';
+
+CREATE TABLE `check_flawinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `name` varchar(20) NOT NULL COMMENT '疵点名称',
+  `shortcutKey` varchar(30) DEFAULT NULL COMMENT '快捷键',
+  `type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '疵点类型(0普通,1墨印,2起始瑕疵点,3结束瑕疵点,4连续疵点)',
+  `matchName` varchar(20) DEFAULT NULL COMMENT '配对的疵点名称',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='疵点信息配置表';
+
+CREATE TABLE `check_startnoll` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表主键',
+  `orderID` varchar(20) NOT NULL COMMENT '订单子表ID',
+  `rollNo` varchar(20) NOT NULL COMMENT '自定义卷号',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='自定义卷号配置表';
+

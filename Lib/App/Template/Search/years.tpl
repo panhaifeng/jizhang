@@ -1,0 +1,1 @@
+<input name="years" type="text" id="years" value="{$arr_condition.years}" size="5">年

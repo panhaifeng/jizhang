@@ -1,0 +1,84 @@
+
+/*首页 */
+
+body{ margin:0px; padding:0px; font: 12px Arial, Helvetica, sans-serif}
+
+a{}
+a:link{color:#0099CC;text-decoration: underline;}
+a:visited{color:#0099CC;text-decoration: underline;}
+a:hover{color:#0099CC;text-decoration: underline;}
+
+input{border: 1px solid #3c3c3c; height:19px;	background-color: #F3F3F3;}
+
+DIV#top{width:780px; height:60px; clear:both; margin:0 auto; padding-top:30px /*border:1px solid #000;*/}
+DIV#top ul{margin-left:0px;list-style:none; /*border:1px solid #000;*/}
+DIV#top ul li{float:left;}
+DIV#top ul li h3{font:16px; margin-left:20px; margin-top:18px;width:480px; color:#003366}
+.czClock{margin-left:55px; margin-top:22px; width:150px; color:#fe7600; font-weight:bold;/*border:1px solid #000;*/}
+
+
+
+
+DIV#nav {clear:both;	width:800px; height:31px; margin:0 auto; background-image:url(../Image/Index/bg_nav.gif); border:1px solid #CAD9E2; }
+DIV#nav ul{list-style:none; text-align:left; margin-left:5px; margin-top:8px;}
+DIV#nav ul li{float:left;}
+DIV#nav ul li strong {		
+		background:transparent url(../Image/Index/ictip.gif) no-repeat scroll 10px 5px;
+		padding-top:4px; padding-left:30px; padding-right:10px; font-weight:bold; color:#0066CC;}
+
+
+
+
+
+
+
+
+DIV#content{width:800px;clear:both;	margin:0 auto; /*border:1px solid #000;*/}
+.content_ul {list-style:none; margin:0px; padding:0px;}
+.content_li {float:left;}
+DIV#contentLeft{margin-left:12px;}
+DIV#contentMiddle{margin-left:10px;}
+DIV#contentRight{margin-left:10px;}
+
+
+DIV#weather, #phone, #message{width:200px; border:1px solid #CCC; margin-top:10px;}
+DIV#developLog, #news, #companyPloy, #companyFile, #companySystem{width:400px; border:1px solid #CCC; margin-top:10px;}
+DIV#quickNav{width:150px; border:1px solid #CCC; margin-top:10px;}
+
+
+.caption {background:url(../Image/Index/bg_lm.gif);	height:29px; font-weight:bold; color:#006699;padding:0px;}
+.caption ul{list-style:none; margin:0px;padding:0px;height:29px;}
+.caption ul li {margin-left:5px;margin-top:5px;}
+.caption ul li img{padding-right:5px;}
+
+
+.phoneList{margin-top:10px;	margin-left:0px; width:100%;}
+.phoneList ul{ line-height:20px; font-size:12px; width:80%; margin:0 auto;}
+.phoneList li{padding-left:0px; list-style: none; border-bottom: 1px solid #EBEAEA; }
+.phoneList li h5{padding-left:0px; font-size:12px; font-weight:normal; width:90px; float:left;}
+.phoneList li span{color:#CC9900;}
+
+.messageContent {}
+.messageContent ul{list-style:none;width:80%; margin:0 auto;}
+#messageButton {width:60px; margin:0 auto; padding-top:10px; height:30px;}
+
+
+.contentMiddleList{margin-left:20; padding-top:10px;}
+.contentMiddleList ul {margin:0px; padding:0px; list-style:none; }
+.contentMiddleList ul li {margin-left:10px; height:20px;}
+.contentMiddleList ul li a:link{color:#223355;text-decoration: none;}
+.contentMiddleList ul li a:visited{color:#223355;text-decoration: none;}
+.contentMiddleList ul li a:hover{color:#223355;text-decoration: underline;}
+
+.quickNavList ul{padding:0px; margin:0px; list-style:none; font-size:13px; font-weight:bold;	color:#999999;}
+.quickNavList ul li{height:20px; padding-top:20px; padding-left:20px; padding-bottom:0px; margin-bottom:0px; list-style: none; border-bottom: 1px dashed #EBEAEA; }
+.quickNavList ul li img{padding-right:5px;}
+.quickNavList ul li a:link{color:#CC9900;text-decoration: none;}
+.quickNavList ul li a:visited{color:#CC9900;text-decoration: none;}
+.quickNavList ul li a:hover{color:black;text-decoration: underline;}
+
+
+DIV#publicSearch {clear:both; width:775px; margin:0 auto; border:1px solid #CCC;}
+.publicSearchList{margin-left:20; padding-top:10px;}
+.publicSearchList ul{margin:0px; padding:0px; list-style:none; clear:both; height:30px;}
+.publicSearchList ul li{float:left; margin-left:20px; width:150px;}

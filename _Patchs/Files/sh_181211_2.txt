@@ -1,0 +1,27 @@
+CREATE TABLE `code_auto_incrementing` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `relatId` int(11) NOT NULL COMMENT '关联的表id',
+  `code` varchar(20) NOT NULL COMMENT '编号',
+  `rule` varchar(30) NOT NULL COMMENT '规则',
+  `checkMachineId` int(11) NOT NULL COMMENT '验布机id',
+  `groups` int(5) NOT NULL COMMENT '组别',
+  `kind` varchar(10) DEFAULT NULL COMMENT '类别',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `rule_code` (`code`,`rule`),
+  KEY `relatId` (`relatId`)
+) ENGINE=MyISAM AUTO_INCREMENT=54422 DEFAULT CHARSET=utf8 COMMENT='编号自增表';
+
+CREATE TABLE `api_log` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `type` smallint(1) NOT NULL COMMENT '0表示响应1表示调用',
+  `success` tinyint(1) NOT NULL COMMENT '是否成功',
+  `apiName` varchar(100) NOT NULL COMMENT 'api名称',
+  `url` varchar(200) NOT NULL COMMENT '回应地址',
+  `params` text NOT NULL COMMENT '传参',
+  `msg` text NOT NULL COMMENT '错误信息',
+  `calltime` datetime NOT NULL COMMENT '调用时间',
+  `retrytime` datetime NOT NULL COMMENT '重试时间',
+  `retrytimes` int(4) NOT NULL COMMENT '重试次数',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=75124 DEFAULT CHARSET=utf8 COMMENT='api调用日志';
+

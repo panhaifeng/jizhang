@@ -1,0 +1,1 @@
+<input name="tradeMemo" type="text" id="tradeMemo" value="{$arr_condition.tradeMemo}" size="10" emptyText='贸易部要求' placeholder='贸易部要求'/>

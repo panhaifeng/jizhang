@@ -1,0 +1,5 @@
+ALTER TABLE `shengchan_chanliang`
+ADD COLUMN `hourSpeed`  decimal(10,2) NOT NULL COMMENT '时速' AFTER `cnt`,
+ADD COLUMN `revolution`  decimal(10,2) NOT NULL COMMENT '转速' AFTER `hourSpeed`,
+ADD COLUMN `danjiaRe`  decimal(10,2) NOT NULL COMMENT '单价' AFTER `revolution`,
+ADD COLUMN `moneyRe`  decimal(10,2) NOT NULL COMMENT '金额' AFTER `danjiaRe`;

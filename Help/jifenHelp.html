@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经验值计算规则及排名</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script language="javascript" src="../Resource/Script/jquery.js"></script>
+<script language="javascript">
+$(function(){
+	getComp();
+	getUser();
+	getUserSelfComp();
+});
+//取得前5的公司排名
+function getComp(){	
+	var urls = '../index.php?controller=Jifen_Comp&action=GetTopByAjax';
+		var param = {flag:1};
+		$.getJSON(urls,param,function(json){
+			debugger;
+			var tbl = $('#tblTop');
+			if(json.success===false) {
+				while (tbl[0].rows.length>2) {
+				tbl[0].deleteRow(1);
+				}
+			
+			}
+			var rowset = json.rowset;
+			var cntCol = tbl[0].rows[0].cells.length;
+			//清空tblGy
+			while (tbl[0].rows.length>2) {
+				tbl[0].deleteRow(1);
+			}
+			//对tblGy重新插入行
+			if(rowset && rowset.length>0){
+				for(var i=0;rowset[i];i++) {
+					var newTr = tbl[0].insertRow(-1);
+					for(var j=0;j<cntCol;j++) {
+						$(newTr.insertCell(-1)).attr('align','center');
+					}
+					
+					//对各个单元格进行赋值
+					$(newTr.cells[0]).text(i+1+'.');
+					$(newTr.cells[1]).text(rowset[i].compName);
+					$(newTr.cells[2]).text(rowset[i].jinyan);
+				}
+			}
+		});
+}
+//取得前5的用户排名
+function getUser(){	
+	var urls = '../index.php?controller=Jifen_Comp&action=GetTopByAjax';
+		var param = {flag:2};
+		$.getJSON(urls,param,function(json){
+			debugger;
+			var tbl = $('#tblTopUser');
+			if(json.success===false) {
+				while (tbl[0].rows.length>2) {
+				tbl[0].deleteRow(1);
+				}
+			
+			}
+			var rowset = json.rows;
+			var cntCol = tbl[0].rows[0].cells.length;
+			//清空tblGy
+			while (tbl[0].rows.length>2) {
+				tbl[0].deleteRow(1);
+			}
+			//对tblGy重新插入行
+			if(rowset && rowset.length>0){
+				for(var i=0;rowset[i];i++) {
+					var newTr = tbl[0].insertRow(-1);
+					for(var j=0;j<cntCol;j++) {
+						$(newTr.insertCell(-1)).attr('align','center');
+					}
+					
+					//对各个单元格进行赋值
+					$(newTr.cells[0]).text(i+1+'.');
+					$(newTr.cells[1]).text(rowset[i].userName);
+					$(newTr.cells[2]).text(rowset[i].jinyan);
+				}
+			}
+		});
+}
+
+//取得前3的用户排名
+function getUserSelfComp(){	
+		var urls = '../index.php?controller=Jifen_Comp&action=GetTopByAjax';
+		var param = {flag:3};
+		$.getJSON(urls,param,function(json){
+			//debugger;
+			var tbl = $('#tblTopUserSelf');
+			if(json.success===false) {
+				while (tbl[0].rows.length>2) {
+				tbl[0].deleteRow(1);
+				}
+			
+			}
+			var rowset = json.rowset;
+			var cntCol = tbl[0].rows[0].cells.length;
+			//清空tblGy
+			while (tbl[0].rows.length>2) {
+				tbl[0].deleteRow(1);
+			}
+			//对tblGy重新插入行
+			if(rowset && rowset.length>0){
+				for(var i=0;rowset[i];i++) {
+					var newTr = tbl[0].insertRow(-1);
+					for(var j=0;j<cntCol;j++) {
+						$(newTr.insertCell(-1)).attr('align','center');
+					}
+					
+					//对各个单元格进行赋值
+					$(newTr.cells[0]).text(i+1+'.');
+					$(newTr.cells[1]).text(rowset[i].realName);
+					$(newTr.cells[2]).text(rowset[i].jingyan);
+				}
+			}
+		});
+}
+</script>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+   <td align="left" valign="top" style="padding-left:10px; padding-top:10px; line-height:22px; width:25%">
+    <strong class="txt-impt" style="color:#FC0">企业top5</strong>
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" id='tblTop' height="35%">
+      <tr align="center">
+          <td>NO.</td>
+          <td>公司</td>
+          <td>经验值</td>          
+        </tr>
+        
+        </table>
+        <strong class="txt-impt" style="color:#FC0">用户top5</strong>
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" id='tblTopUser' height="35%">
+      <tr align="center">
+          <td>NO.</td>
+          <td>姓名</td>
+          <td>经验值</td>          
+        </tr>
+        
+        </table>
+		<strong class="txt-impt" style="color:#FC0">本公司用户top3</strong>
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" id='tblTopUserSelf' height="35%">
+      <tr align="center">
+          <td>NO.</td>
+          <td>姓名</td>
+          <td>经验值</td>          
+        </tr>
+        
+        </table>
+    </td>
+<td  style="padding-left:10px;">
+<div class="mod-QA">
+<div class="g-contBox g-contBox-topThin" style=" overflow-y: scroll; height:400px;">
+	<div class="g-contBox-content">
+		<div class="g-contBox-contBgBot">
+		<!-- S 积分规则 -->
+			<!-- 一条规则 -->
+			<dl>
+				<dt>一、关于系统用户经验值</dt>
+				<dd><br><strong class="txt-impt">1.用户经验值：</strong>
+                经验值是对软件操作用户的鼓励，进行软件相关操作就能免费获得系统经验值，享受系统经验值回馈（详情浏览下面的“如何获得经验值”）
+                <br /><br />
+                <strong class="txt-impt">2.经验值计算：</strong>
+                系统根据用户的历史累计经验值，同步计算用户的总经验值。
+                <br /><br />
+                <strong class="txt-impt">3.经验等级：</strong>
+                系统根据用户的经验值，计算对应的经验等级。当符合升级条件后，系统自动帮用户升级。
+                <br />
+                等级及对应用户等级、经验值一览表：  
+						<table class="g-table g-table-simple">
+							<tbody>
+								<tr>
+									<th width="30%">经验值</th>
+									<th width="14%">等级</th>
+									<th width="20%">级差</th>
+									<th width="18%">用户等级</th>
+									<th width="18%">等级图标</th>
+								</tr>
+								<tr>
+								  <td class="tabList" >0-500分 </td>
+								  <td class="tabList" >1-10级 </td>
+								  <td class="tabList" >50</td>
+								  <td class="tabList" >普通用户 </td>
+									<td><img src="Image/user-1.GIF" /></td>
+								</tr>
+								<tr>
+								  <td class="tabList" >501-5500分 </td>
+								  <td class="tabList" >10-20级 </td>
+								  <td class="tabList" >500</td>
+								  <td class="tabList">白银用户 </td>
+									<td><img src="Image/user-2.GIF"  /></td>
+								</tr>
+								<tr>
+								  <td class="tabList" >5501-15500分 </td>
+								  <td class="tabList" >20-30级 </td>
+								  <td class="tabList" >1000</td>
+								  <td class="tabList" >黄金用户 </td>
+									<td><img src="Image/user-3.GIF"  /></td>
+								</tr>
+								<tr>
+								  <td class="tabList">15501-35500分 </td>
+								  <td class="tabList">30-40级 </td>
+								  <td class="tabList">2000</td>
+								  <td class="tabList">钻石用户 </td>
+									<td><img src="Image/user-4.GIF"  /></td>
+								</tr>
+							</tbody>
+						</table>
+                </dd>
+			</dl>
+            
+			<!-- 一条规则 -->
+			<dl>
+				<dt>二、如何获得经验值</dt>
+				<dd><br>
+                <strong class="txt-impt">1.用户经验值：</strong>
+                用户在系统里面进行多项操作都可获得经验值：
+                	<table class="g-table g-table-simple">
+							<tbody>
+								<tr>
+									<th>具体经验值方式</th>
+									<th>经验值</th>
+									<th>规则限制</th>
+							  </tr>
+								<tr>
+								  <td class="tabList" >非admin用户登录系统1次 </td>
+								  <td class="tabList" >5 </td>
+								  <td class="tabList" >每人每天最多(24小时)积 5 分</td>
+							    </tr>
+							</tbody>
+						</table>
+					
+				  <br>
+				</dd>
+			</dl>
+			<!-- 一条规则 -->
+			<dl>
+				<dt>三、关于企业星级</dt>
+				<dd>
+				  <p style="margin-top: 20px;"><strong>1.星级评定：</strong></p>
+				  <p>系统根据企业中用户的经验值，计算对应的星级。当符合升级条件后，系统自动帮企业升级。星级被划分为5个等级，企业星级越高，能享
+受到软件优惠政策和获得的增值服务也就越多。</p>					
+					
+					<!-- /积分折半 -->
+					<p style="margin-top: 20px;"><strong>2.	企业星级及对应经验值一览表：</strong></p>
+						<table class="g-table g-table-simple">
+							<tbody>
+								<tr>
+									<th>具体经验值方式</th>
+									<th>企业星级</th>
+									<th>星级图标</th>
+							  </tr>
+								<tr>
+								  <td>0-500分 </td>
+								  <td>1星 </td>
+								  <td><img src="Image/star_level1.GIF"/></td>
+							  </tr>
+								<tr>
+								  <td>501-8000分 </td>
+								  <td>2星 </td>
+								  <td><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/></td>
+							  </tr>
+								<tr>
+								  <td>8001-40000分 </td>
+								  <td>3星 </td>
+								  <td><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/></td>
+							  </tr>
+								<tr>
+								  <td>40001-4000000分 </td>
+								  <td>4星 </td>
+								  <td><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/></td>
+							  </tr>
+								<tr>
+								  <td>4000000分以上 </td>
+								  <td>5星 </td>
+								  <td><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/><img src="Image/star_level1.GIF"/></td>
+							  </tr>
+							</tbody>
+						</table>
+                    </dd></dl>
+
+		<!-- E 积分规则 -->
+		</div>
+	</div>
+</div>
+</div>
+    </td>
+   
+  </tr>
+</table>
+</body>
+</html>
